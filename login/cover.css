@@ -32,7 +32,8 @@ body {
 
 body {
   background-image: url("http://giphygifs.s3.amazonaws.com/media/11kn6DFp9BNqWA/giphy.gif");
-  background-size: 100%;
+  
+  background-size: cover;
   display: -ms-flexbox;
   display: flex;
   color: #fff;
