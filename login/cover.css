@@ -32,7 +32,7 @@ body {
 
 body {
   background-image: url("https://i.pinimg.com/originals/92/04/04/920404c5fff061b116008932b8dbe204.gif");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   display: -ms-flexbox;
   display: flex;
