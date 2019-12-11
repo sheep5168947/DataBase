@@ -8,6 +8,7 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -37,7 +38,6 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand">Team No.6</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#">Home</a>
           <a class="nav-link" href="#">Features</a>
@@ -50,14 +50,62 @@
       <h1 class="cover-heading">NUK CSIE DataBase project</h1>
       <p class="lead">please Enter your account or login in guest</p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary" onclick="">Login</a>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="btn btn-lg btn-secondary">
+                  Login
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div style=" border-radius: 20px;">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Account" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="password" aria-label="Username"
+                      aria-describedby="basic-addon1">
+
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="btn btn-lg btn-secondary">
+                  Guest
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Nickname"><br>
+                  <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+
+              </div>
+            </div>
+          </div>
       </p>
     </main>
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
-            href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>Minecraft database made by team.6</p>
       </div>
     </footer>
   </div>
