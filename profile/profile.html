@@ -350,62 +350,111 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">主頁</h1>
-            <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            <h1 class="h3 mb-0 text-gray-800">Profile</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
-
-         
-    
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
+          <div class="container" style="display: flex; ">
+            <div class="span2">
+              <img src="../Profucer/img/註解 2019-12-12 130950.png" alt=""
+                class="img-rounded" style="border-radius: 50%;">
+            </div>
+            <div class="span4" style="margin-left: 100px;">
+                <div class="row">
+		                <div class="col-md-12">
+		                    <h4>Your Profile</h4>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <form>
+                              <div class="form-group row">
+                                <label for="username" class="col-4 col-form-label">User Name</label> 
+                                <div class="col-8">
+                                  <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
+                                </div>
+                              </div>
+                          
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Public Info</label> 
+                                <div class="col-8">
+                                  <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="text" class="col-4 col-form-label">Account</label> 
+                                  <div class="col-8">
+                                    <p class="form-control here">{{Account}}</p>
+                                  </div>
+                                </div>
+                              <div class="form-group row">
+                                <label for="newpass" class="col-4 col-form-label">Password</label> 
+                                <div class="col-8">
+                                  <p id="newpass" class="form-control here">{{Password}}</p>
+                                </div>
+                              </div> 
+                              <div class="form-group row">
+                                <div class="offset-4 col-8">
+                                  <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                </div>
+                              </div>
+                            </form>
+		                </div>
+		            </div>
             </div>
           </div>
-        </footer>
-        <!-- End of Footer -->
+
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white" style="position: relative; top: 110px;">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2019</span>
+              </div>
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
 
       </div>
-      <!-- End of Content Wrapper -->
+      <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="../login/login.html">Logout</a>
+      <!-- Logout Modal-->
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+              <a class="btn btn-primary" href="../login/login.html">Logout</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
