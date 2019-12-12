@@ -14,9 +14,11 @@ function Nickname() {
 
     }
     else {
+        
+        
         window.location.href = "../main page/main.html";
         var name = document.getElementById("Nickname").value;
-        document.getElementById("hahaha").innerHTML = document.getElementById("Nickname").value;
+        document.getElementById("hahaha").innerHTML = name;
     }
 
 }
