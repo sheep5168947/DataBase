@@ -9670,14 +9670,6 @@ a.text-primary:hover {
     color: #224abe!important
 }
 
-.main-img {
-    position: relative;
-    height: 15rem;
-    width: 100%;
-    background-size: cover;
-    background-image: url("https://cdn.discordapp.com/attachments/413715255953326091/644888783027961867/unknown.png")
-}
-
 .text-secondary {
     color: #858796!important
 }
