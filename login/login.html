@@ -94,8 +94,8 @@
                                                     登入成功
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" onclick="SigninSuccess()"
-                                                        data-dismiss="modal">跳轉
+                                                    <button type="button" class="btn btn-default"
+                                                        onclick="SigninSuccess()" data-dismiss="modal">跳轉
                                                     </button>
                                                 </div>
                                             </div><!-- /.modal-content -->
@@ -116,11 +116,14 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <div class="input-group">
+                                <div class="input-group" >
                                     <input type="text" class="form-control" placeholder="Nickname" id="Nickname"><br>
                                     <a href="#" class="btn btn-primary" type="submit" value="Submit"
                                         onclick="Nickname()">Submit</a>
+                                    
+                                    
                                 </div>
+                                <p class="lead" style="visibility: hidden;" id="withoutnickname">please Enter your Nickname</p>
                             </div>
                         </div>
                     </div>
