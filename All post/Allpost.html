@@ -204,7 +204,7 @@
                             </div>
                         </li>
 
-                    
+                        
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -245,55 +245,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center" style="margin-bottom: 50px;">
-                        <h1 class="h3 mb-0 text-gray-800">Post</h1>
-                    </div>
-                    <div style="margin-bottom: 50px;">
-                        <button type="button" class="btn btn-outline-warning" onclick="addpost()">新增Post</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="deletpost()" >刪除Post</button>
+                        <h1 class="h3 mb-0 text-gray-800">AllPost</h1>
                     </div>
                 </div>
                 <!-- End of Content Wrapper -->
-                <div style="padding-left: 20%;padding-right: 20%;display: block;" id="addpost">
-                    <form role=" form ">
-                        <div class=" form-group ">
-                            <label> 標題</label>
-                            <input type=" text " class=" form-control " placeholder=" 輸入標題" name="Title">
-                        </div>
-                    </form>
-                    <form role=" form ">
-                        <div class=" form-group ">
-                            <label> 內文</label>
-                            <textarea class=" form-control " rows=" 10 " placeholder="輸入內文" name="Contents"></textarea>
-
-                        </div>
-                    </form>
-                    <button type="button" class="btn btn-outline-primary" style="float:right;">Submit</button>
-                </div>
-                <div style="padding-left: 20%;padding-right: 20%; display: none;" id="deletpost" >
-                    <table class="table table-hover" >
-                        <thead>
-                            <tr>
-                                <th>Order</th>
-                                <th>Title</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{1}}</td>
-                                <td>{{Title 1}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{2}}</td>
-                                <td>{{Title 2}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{3}}</td>
-                                <td>{{Title 3}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div >
-
+                
 
                 <a class="scroll-to-top rounded" href="#page-top">
                     <i class="fas fa-angle-up"></i>
