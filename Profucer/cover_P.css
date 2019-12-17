@@ -156,7 +156,7 @@ article div.container {
     justify-content: space-evenly;
     flex-wrap: wrap;
     border-radius: 20px;
-    width: 70%;
+    /* width: 70%; */
     padding: 20px;
     margin: 20px 0;
     border-radius: 20px;
@@ -189,7 +189,7 @@ article div.container div.profile {
 
 .container {
     animation-name: slowout;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 @keyframes slowout {
