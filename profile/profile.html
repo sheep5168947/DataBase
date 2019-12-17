@@ -349,7 +349,7 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <div class="d-sm-flex align-items-center" style="margin-bottom: 200px;">
             <h1 class="h3 mb-0 text-gray-800">Profile</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
@@ -360,67 +360,68 @@
                 class="img-rounded" style="border-radius: 50%;">
             </div>
             <div class="span4" style="margin-left: 100px;">
-                <div class="row">
-		                <div class="col-md-12">
-		                    <h4>Your Profile</h4>
-		                    <hr>
-		                </div>
-		            </div>
-		            <div class="row">
-		                <div class="col-md-12">
-		                    <form>
-                              <div class="form-group row">
-                                <label for="username" class="col-4 col-form-label">User Name</label> 
-                                <div class="col-8">
-                                  <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
-                                </div>
-                              </div>
-                          
-                              <div class="form-group row">
-                                <label for="publicinfo" class="col-4 col-form-label">Public Info</label> 
-                                <div class="col-8">
-                                  <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                  <label for="text" class="col-4 col-form-label">Account</label> 
-                                  <div class="col-8">
-                                    <p class="form-control here">{{Account}}</p>
-                                  </div>
-                                </div>
-                              <div class="form-group row">
-                                <label for="newpass" class="col-4 col-form-label">Password</label> 
-                                <div class="col-8">
-                                  <p id="newpass" class="form-control here">{{Password}}</p>
-                                </div>
-                              </div> 
-                              <div class="form-group row">
-                                <div class="offset-4 col-8">
-                                  <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                                </div>
-                              </div>
-                            </form>
-		                </div>
-		            </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h4>Your Profile</h4>
+                  <hr>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <form>
+                    <div class="form-group row">
+                      <label for="username" class="col-4 col-form-label">User Name</label>
+                      <div class="col-8">
+                        <input id="username" name="username" placeholder="Username" class="form-control here"
+                          required="required" type="text">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="publicinfo" class="col-4 col-form-label">Public Info</label>
+                      <div class="col-8">
+                        <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="text" class="col-4 col-form-label">Account</label>
+                      <div class="col-8">
+                        <p class="form-control here">{{Account}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="newpass" class="col-4 col-form-label">Password</label>
+                      <div class="col-8">
+                        <p id="newpass" class="form-control here">{{Password}}</p>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="offset-4 col-8">
+                        <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
 
-
-          <!-- Footer -->
-          <footer class="sticky-footer bg-white" style="position: relative;">
-            <div class="container my-auto">
-              <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Your Website 2019</span>
-              </div>
-            </div>
-          </footer>
-          <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
 
       </div>
       <!-- End of Page Wrapper -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
 
       <!-- Scroll to Top Button-->
       <a class="scroll-to-top rounded" href="#page-top">
