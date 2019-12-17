@@ -9,14 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title hre>Database Project No.6-主頁</title>
+    <title hre>Database Project No.6-中立型生物</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <title hre>Database Project No.6-主頁</title>
+    <title hre>Database Project No.6-中立型生物</title>
     <script src="../function.js"></script>
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -37,7 +36,7 @@
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../main page/main.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-compass"></i>
                 </div>
@@ -49,7 +48,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="../main page/main.html">
+                <a class="nav-link" href="main.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>主頁</span></a>
             </li>
@@ -71,38 +70,12 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">生物:</h6>
-                        <a class="collapse-item" href="buttons.html">攻擊型生物</a>
-                        <a class="collapse-item" href="cards.html">攻擊型生物</a>
+                        <a class="collapse-item" href="攻擊型生物.html">攻擊型生物</a>
+                        <a class="collapse-item" href="中立型生物.html">中立型生物</a>
                     </div>
                 </div>
             </li>
 
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small" name="Username">{{Username}}</span>
-                <img class="img-profile rounded-circle" name="Userpicture" src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
-              </a>
-              <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="../profile/profile.html">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 個人簡介
-                </a>
-                <a class="dropdown-item" href="../post/post.html">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 新增/刪除貼文
-                </a>
-                <a class="dropdown-item" href="../All post/Allpost.html">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 所有貼文
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../login/login.html" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> 登出
-                </a>
-              </div>
 
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -114,9 +87,9 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">世界:</h6>
-                        <a class="col lapse-item" href="login.html">主世界</a>
-                        <a class="collapse-item" href="register.html">地獄</a>
-                        <a class="collapse-item" href="forgot-password.html">終界</a>
+                        <a class="collapse-item" href="主世界.html">主世界</a>
+                        <a class="collapse-item" href="地獄.html">地獄</a>
+                        <a class="collapse-item" href="終界.html">終界</a>
                     </div>
                 </div>
             </li>
@@ -130,9 +103,9 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">道具:</h6>
-                        <a class="collapse-item" href="login.html">工具</a>
-                        <a class="collapse-item" href="register.html">食物</a>
-                        <a class="collapse-item" href="forgot-password.html">建材</a>
+                        <a class="collapse-item" href="工具.html">工具</a>
+                        <a class="collapse-item" href="食物.html">食物</a>
+                        <a class="collapse-item" href="建材.html">建材</a>
                         <a class="collapse-item" href="礦物.html">礦物</a>
                     </div>
                 </div>
@@ -141,7 +114,7 @@
 
             <!-- Nav Item - 地形 -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="地形.html">
                     <i class="fas fa-mountain"></i>
                     <span>地形</span></a>
             </li>
@@ -356,110 +329,246 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center" style="margin-bottom: 200px;">
-                        <h1 class="h3 mb-0 text-gray-800">Profile</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    <div class="d-sm-flex align-items-center justify-content-main mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">中立型生物</h1>
+                        <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-edit"></i> Edit</a>
                     </div>
-                    <div class="container" style="display: flex; ">
-                        <div class="span2">
-                            <img src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto" alt="" class="img-rounded" style="border-radius: 50%;">
-                        </div>
-                        <div class="span4" style="margin-left: 100px;">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>Your Profile</h4>
-                                    <hr>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <p>本頁列出了所有中立型生物</p>
+                    </div>
+                    <!-- Content Row -->
+                    <div class="row">
+
+
+                        <!-- Content Row -->
+
+                        <div class="row">
+
+                            <!-- Area Chart -->
+                            <div class="table">
+                                <div class="card shadow mb-4">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">中立型生物</h6>
+                                        <div class="dropdown no-arrow">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <table class="sortable wikitable jquery-tablesorter" data-description="名稱">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th class="headerSort" tabindex="0" role="columnheader button" title="該生物名稱">名稱
+                                                    </th>
+                                                    <th class="headerSort headerSortDown" tabindex="0" role="columnheader button" title="該搜索範圍">搜索範圍
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>生物id</td>
+                                                    <td>名稱</td>
+                                                    <td>搜索範圍</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot></tfoot>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="username" class="col-4 col-form-label">User Name</label>
-                                            <div class="col-8">
-                                                <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="publicinfo" class="col-4 col-form-label">Public Info</label>
-                                            <div class="col-8">
-                                                <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="text" class="col-4 col-form-label">Account</label>
-                                            <div class="col-8">
-                                                <p class="form-control here">{{Account}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="newpass" class="col-4 col-form-label">Password</label>
-                                            <div class="col-8">
-                                                <p id="newpass" class="form-control here">{{Password}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="offset-4 col-8">
-                                                <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
                         </div>
                     </div>
-
+                    <!-- /.container-fluid -->
 
                 </div>
-                <!-- End of Content Wrapper -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; NUK CSIE team.No6 2019</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Page Wrapper -->
+            <!-- End of Content Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2019</span>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-            <!-- Scroll to Top Button-->
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
-
-            <!-- Logout Modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-                        </div>
-                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="../login/login.html">Logout</a>
-                        </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="../login/login.html">Logout</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Bootstrap core JavaScript-->
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
 
-            <!-- Custom scripts for all pages-->
-            <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
