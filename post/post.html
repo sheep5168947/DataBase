@@ -330,7 +330,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Username}}</span>
                                 <img class="img-profile rounded-circle"
                                     src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                             </a>
@@ -363,25 +363,33 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center" style="margin-bottom: 200px;">
-                        <h1 class="h3 mb-0 text-gray-800">Profile</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    <div class="d-sm-flex align-items-center" style="margin-bottom: 100px;">
+                        <h1 class="h3 mb-0 text-gray-800">Post</h1>
                     </div>
                 </div>
                 <!-- End of Content Wrapper -->
+                <div style="padding-left: 20%;padding-right: 20%;">
+                    <form role=" form ">
+                        <div class=" form-group ">
+                            <label > 標題</label>
+                            <input type=" text " class=" form-control " placeholder=" 輸入標題">
+                        </div>
+                    </form>
+                    <form role=" form ">
+                        <div class=" form-group ">
+                            <label> 內文</label>
+                            <textarea class=" form-control " rows=" 10 " placeholder="輸入內文" name="Contents"></textarea>
+
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-outline-primary" style="float:right;">Submit</button>
+                </div>
 
 
                 <!-- End of Page Wrapper -->
 
                 <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2019</span>
-                        </div>
-                    </div>
-                </footer>
+
                 <!-- End of Footer -->
 
                 <!-- Scroll to Top Button-->
@@ -400,7 +408,8 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                            <div class="modal-body">Select "Logout" below if you are ready to end your current
+                                session.
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -418,7 +427,15 @@
 
                 <!-- Custom scripts for all pages-->
                 <script src="js/sb-admin-2.min.js"></script>
-
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; NUK CSIE team.No6 2019</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
 </body>
 
 </html>
