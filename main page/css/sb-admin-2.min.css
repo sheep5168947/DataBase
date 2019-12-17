@@ -7006,6 +7006,11 @@ button.bg-dark:hover {
     justify-content: space-between!important
 }
 
+.justify-content-main {
+    justify-content: space-between!important;
+    border-bottom: 1px solid #a2a9b1;
+}
+
 .justify-content-around {
     justify-content: space-around!important
 }
