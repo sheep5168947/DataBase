@@ -22,7 +22,7 @@ def reply_login(request):
             #print(request.POST['account'])
             # 確認有沒有輸入正確
             if(request.POST['account']=="" or request.POST['password']==""):
-                return render(request, 'MinecraftDB/login.html',{'err_acc':"請輸入正確的 account 或 password"})
+                return render(request, 'static/login/login.html',{'err_acc':"請輸入正確的 account 或 password"})
             #確認有沒有此人
             cursor=connection.cursor()
             cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '"+request.POST['account']+"' and Password LIKE '"+request.POST['password']+"'")
@@ -31,40 +31,44 @@ def reply_login(request):
             #print(ans)
             if ans is None:
                 print("no ans")
-                return render(request, 'MinecraftDB/login.html',{'err_acc':"請輸入正確的 account 或 password"})
+                return render(request, 'static/login/login.html',{'err_acc':"請輸入正確的 account 或 password"})
             else :
                 return redirect("/MinecraftDB/main/"+ans[0]+"/")         
         if('nickname' in request.POST):
-            #print(request.POST['nickname'])
+            print(request.POST['nickname'])
             if(request.POST['nickname']==""):
-                return render(request, 'MinecraftDB/login.html',{'no_nike':"請輸入nickname"})
+                return render(request, 'static/login/login.html',{'no_nike':"請輸入nickname"})
+            else:
+                return redirect("/MinecraftDB/main/"+"guest"+"/")
         # DB尋找
 
 
 def reply_post(request):
+    print("get")
+    print(request.POST['Contents'])
     cursor=connection.cursor()
     title=request.POST['title']
     context=request.POST['Contents']
     print(title+" "+context)
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,"someone", context])
     #return render(request, 'MinecraftDB/login.html')
-    return redirect("/MinecraftDB/main/")
+    return redirect("/MinecraftDB/main/"+"1"+"/")
 
 def login(request):
-    return render(request, 'MinecraftDB/login.html')
+    return render(request, 'static/login/login.html')
 
 def main(request,username):
     cursor=connection.cursor()
     cursor.execute('select Introduction_text from MinecraftDB_Terrain')
     search_object=cursor.fetchone()[0]
-    return render(request, 'MinecraftDB/main.html',{'Username':username})
+    return render(request, 'static/main_page/main.html',{'Username':username})
 
 def producer(request):
-    return render(request, 'MinecraftDB/producer.html')
+    return render(request, 'static/Producer/producer.html')
 
 def post(request):
-    return render(request, 'MinecraftDB/post.html')
+    return render(request, 'static/post/post.html')
 
 def ALLpost(request):
     List=[{'Poster':"willy",'Title':"loooooool",'content':"nooo"}]
-    return render(request, 'MinecraftDB/Allpost.html',{'List':List,'Username':'lulalabana'})
+    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})

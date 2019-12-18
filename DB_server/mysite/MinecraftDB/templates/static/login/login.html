@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -8,14 +10,13 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="../function.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Database-login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href='{% static "login/bootstrap.css" %}' rel="stylesheet">
 
 
     <style>
@@ -31,7 +32,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href='{% static "login/cover.css" %}' rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -62,20 +63,24 @@
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <div style=" border-radius: 20px;">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">🤮</span>
+                                    <form action="/MinecraftDB/reply_login/" method="POST">
+                                        {% csrf_token %}
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">🤮</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Account" aria-label="Username" aria-describedby="basic-addon1" name="account">
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Account" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">🤮</span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">🤮</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1" name="password">
+                                        </div>   
+                                        <input type="Submit" action="Submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">                                    
+                                    </form>
+                                    {{err_acc}}
 
-                                    </div>
-                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -110,11 +115,14 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Nickname" id="Nickname"><br>
-                                    <a href="#" class="btn btn-primary" type="submit" value="Submit" onclick="Nickname()">Submit</a>
-                                </div>
-                                <p class="lead">{{head}}</p>
+                                <form action="/MinecraftDB/reply_login/" method="POST">
+                                    {% csrf_token %}
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Nickname" id="Nickname" name="nickname"><br>
+                                        <input href="#" class="btn btn-primary" type="Submit" value="Submit" action="Submit">
+                                    </div>                              
+                                </form>
+                                <p class="lead">{{no_nike}}</p>
                             </div>
                         </div>
                     </div>
