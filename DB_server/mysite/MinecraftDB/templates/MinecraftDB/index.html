@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/test.css' %}">
+        <script src="{% static 'JS/test.js' %}"></script>
+         <title>我的第一個網頁</title>
+    </head>
+    <body>
+        <div class="truones">你好12</div>
+        歡迎光臨 123123
+        {{search_object}}
+
+
+        <form action="/MinecraftDB/reply/" method="post">
+            {% csrf_token %}
+            <label for="user_name">您的名字</label>
+            <input id="user_name" type="text" name="user_name">
+            <input type="submit" value="進入網站">
+        </form>
+    </body>
+</html>
