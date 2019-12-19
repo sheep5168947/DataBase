@@ -36,7 +36,7 @@ def reply_login(request):
                 print("no ans")
                 return render(request, 'static/login/login.html',{'err_acc':"請輸入正確的 account 或 password"})
             else :
-                request.session['account'] = request.POST['account']
+                # request.session["username"] = ans[0]
                 return redirect("/MinecraftDB/main/"+ans[0]+"/")         
         if('nickname' in request.POST):
             print(request.POST['nickname'])
@@ -74,13 +74,12 @@ def post(request,username):
     cursor=connection.cursor()
     cursor.execute("select Member_Diary_name,Diary,Title from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
     search_Diary=cursor.fetchall()
-    # print(search_Diary[0][0])
     List=[]
-
     for item in search_Diary:
         list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
         List.append(list_s)
     print(List)
+    # request.session["username"] = username
     return render(request,'static/post/post.html',{'List':List,'Username':username})
 
 def ALLpost(request):
@@ -101,4 +100,13 @@ def getPost(request):
 
 def deletePost(request):
     print(request.POST)
+    # print(request.session["username"])
     return render(request, 'static/login/login.html')
+
+def profile(request,username):
+    cursor=connection.cursor()
+    cursor.execute("select Member_name,Account_number,Password,Profile from MinecraftDB_member where Member_name LIKE '"+username+"'")
+    # cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '%s' and Password LIKE '%s'",["ppaa","ppaa"])
+    ans=cursor.fetchone()
+    print(ans)
+    return render(request, 'static/profile/profile.html',{'Password':ans[2],'Account':ans[1],'Info':ans[3],'Username':username})

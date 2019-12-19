@@ -144,7 +144,7 @@ a.login {
 }
 
 article {
-    padding-top: 10vh;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
