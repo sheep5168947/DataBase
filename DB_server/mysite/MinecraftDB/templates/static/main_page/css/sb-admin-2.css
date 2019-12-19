@@ -4549,6 +4549,10 @@ input[type="button"].btn-block {
   margin-bottom: -1px;
 }
 
+.hide{
+  display:none;
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;

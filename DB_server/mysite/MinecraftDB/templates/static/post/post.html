@@ -278,8 +278,9 @@
                         style="padding-right: 20px; padding-top: 20px;">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                        <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#DeletePostModal" style="padding-right: 20px; padding-top: 20px;">
+                        <button type="button" class="close " aria-label="Close" data-toggle="modal" data-target="#EditPostModal" style="padding-right: 20px; padding-top: 20px;" onclick="ontest(this)">
                             <i class="fas fa-edit"></i>
+                            <div class="goddamnhide">{{item.id}}</div>
                         </button>
                         <div class="media" style="padding: 20px;">
                             <a class="pull-left" href="#">
@@ -289,7 +290,7 @@
                             <div class="media-body">
                                 <h4 id="PostTitle"class="media-heading">Title：{{item.Title}}</h4>
                                 <p id="Poster"class="text-right">By{{item.Poster}}</p>
-                                <p>{{item.content}}
+                                <div class="contentContainer"><p>{{item.content}}</div>
                             </div>
                         </div>
                     </div>
@@ -343,6 +344,27 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- EditPost Modal-->
+                <div class="modal fade" id="EditPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ready to Edit Post?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </span>
+                            </div>
+                            <textarea class=" form-control " rows=" 10 " placeholder="輸入內文" id="EditContents"></textarea>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <a id="editpost"class="btn btn-primary" href="http://127.0.0.1:8000/MinecraftDB/post/lulalabana/">Sure</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- Bootstrap core JavaScript-->
 
