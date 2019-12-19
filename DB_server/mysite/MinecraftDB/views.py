@@ -49,10 +49,10 @@ def reply_login(request):
 
 def reply_post(request):
     print("get")
-    print(request.POST['Contents'])
+    print(request.POST['content'])
     cursor=connection.cursor()
     title=request.POST['title']
-    context=request.POST['Contents']
+    context=request.POST['content']
     print(title+" "+context)
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,"someone", context])
     #return render(request, 'MinecraftDB/login.html')

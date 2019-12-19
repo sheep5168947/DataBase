@@ -12,4 +12,5 @@ urlpatterns = [
     path('post/<str:username>/', views.post, name='post'),
     path('ALLpost/', views.ALLpost, name='ALLpost'),
     path('profile/<str:username>/', views.profile, name='profile'),
+    path('getPost/',views.getPost),
 ]
