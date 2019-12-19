@@ -78,7 +78,7 @@ def post(request,username):
     for item in search_Diary:
         list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
         List.append(list_s)
-    print(List)
+    # print(List)
     # request.session["username"] = username
     return render(request,'static/post/post.html',{'List':List,'Username':username})
 
@@ -96,10 +96,19 @@ def ALLpost(request):
 
 def getPost(request):
     print(request.POST)
-    return render(request, 'static/login/login.html')
+    cursor=connection.cursor()
+    title=request.POST['Title']
+    context=request.POST['Contents']
+    username=request.POST['Username']
+    cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, username])
+    return redirect("/MinecraftDB/post/"+username+"/")
+    
 
 def deletePost(request):
-    print(request.POST)
+    username=request.POST['Username'].replace("By","")
+    title=request.POST['Title'].replace("Title：","")
+    cursor=connection.cursor()
+    cursor.execute("DELETE FROM MinecraftDB_member_diary WHERE Member_Diary_name LIKE'"+username+"' AND Title LIKE'"+title+"'")
     # print(request.session["username"])
     return render(request, 'static/login/login.html')
 

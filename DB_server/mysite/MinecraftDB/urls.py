@@ -14,5 +14,4 @@ urlpatterns = [
     path('getPost/', views.getPost, name='getPost'),
     path('deletePost/', views.deletePost, name='deletePost'),
     path('profile/<str:username>/', views.profile, name='profile'),
-    path('getPost/',views.getPost),
 ]
