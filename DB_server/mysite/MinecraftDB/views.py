@@ -74,11 +74,11 @@ def signup(request):
     return render(request,'static/sign_up/signup.html')
 def post(request,username):
     cursor=connection.cursor()
-    cursor.execute("select Member_Diary_name,Diary,Title from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
+    cursor.execute("select Member_Diary_name,Diary,Title,id from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
     search_Diary=cursor.fetchall()
     List=[]
     for item in search_Diary:
-        list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
+        list_s={'Poster':item[0],'Title':item[2],'content':item[1],'id':item[3]}
         List.append(list_s)
     # print(List)
     # request.session["username"] = username
@@ -112,6 +112,16 @@ def deletePost(request):
     title=request.POST['Title'].replace("Title：","")
     cursor=connection.cursor()
     cursor.execute("DELETE FROM MinecraftDB_member_diary WHERE Member_Diary_name LIKE'"+username+"' AND Title LIKE'"+title+"'")
+    # print(request.session["username"])
+    return render(request, 'static/login/login.html')
+
+def editPost(request):
+    print(request.POST)
+    ID=request.POST['postID']
+    content=request.POST['Contents']
+    print(ID,content)
+    cursor=connection.cursor()
+    cursor.execute("UPDATE MinecraftDB_member_diary SET Diary = '"+content+"' WHERE ID = "+ID)
     # print(request.session["username"])
     return render(request, 'static/login/login.html')
 

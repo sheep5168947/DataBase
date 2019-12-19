@@ -3899,6 +3899,9 @@ input[type="button"].btn-block {
   border-top-left-radius: 0.35rem;
   border-top-right-radius: 0.35rem;
 }
+.goddamnhide{
+  display: none !important;
+}
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #eaecf4 #eaecf4 #dddfeb;

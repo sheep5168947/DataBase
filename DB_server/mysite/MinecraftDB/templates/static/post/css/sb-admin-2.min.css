@@ -3894,6 +3894,10 @@ input[type=submit].btn-block {
     border-radius: .35rem
 }
 
+.goddamnhide{
+    display: none!important;
+}
+
 .custom-file-label::after {
     position: absolute;
     top: 0;
