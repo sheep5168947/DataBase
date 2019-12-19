@@ -102,6 +102,12 @@ def getPost(request):
     username=request.POST['Username']
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, username])
     return redirect("/MinecraftDB/post/"+username+"/")
+    
+
+def deletePost(request):
+    print(request.POST)
+    # print(request.session["username"])
+    return render(request, 'static/login/login.html')
 
 def profile(request,username):
     cursor=connection.cursor()
