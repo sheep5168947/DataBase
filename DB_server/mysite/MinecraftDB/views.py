@@ -78,7 +78,7 @@ def post(request,username):
     for item in search_Diary:
         list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
         List.append(list_s)
-    print(List)
+    # print(List)
     # request.session["username"] = username
     return render(request,'static/post/post.html',{'List':List,'Username':username})
 
@@ -95,8 +95,13 @@ def ALLpost(request):
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 
 def getPost(request):
-    # print(request.session["username"])
-    return render(request, 'static/login/login.html')
+    print(request.POST)
+    cursor=connection.cursor()
+    title=request.POST['Title']
+    context=request.POST['Contents']
+    username=request.POST['Username']
+    cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, username])
+    return redirect("/MinecraftDB/post/"+username+"/")
 
 def profile(request,username):
     cursor=connection.cursor()
