@@ -43,7 +43,8 @@ def reply_login(request):
             if(request.POST['nickname']==""):
                 return render(request, 'static/login/login.html',{'no_nike':"請輸入nickname"})
             else:
-                return redirect("/MinecraftDB/main/"+"guest"+"/")
+                request.session['username'] = request.POST['nickname']
+                return redirect("/MinecraftDB/main/"+request.session['username']+"/")
         # DB尋找
 
 
@@ -65,11 +66,12 @@ def main(request,username):
     cursor=connection.cursor()
     cursor.execute('select Introduction_text from MinecraftDB_Terrain')
     search_object=cursor.fetchone()[0]
-    return render(request, 'static/main_page/main.html',{'Username':username})
+    return render(request, 'static/main_page/main.html',{'Username':request.session['username']})
 
 def producer(request):
     return render(request, 'static/Producer/producer.html')
-
+def signup(request):
+    return render(request,'static/sign_up/signup.html')
 def post(request,username):
     cursor=connection.cursor()
     cursor.execute("select Member_Diary_name,Diary,Title from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
@@ -80,7 +82,8 @@ def post(request,username):
         List.append(list_s)
     # print(List)
     # request.session["username"] = username
-    return render(request,'static/post/post.html',{'List':List,'Username':username})
+    username = request.session['username']
+    return render(request,'static/post/post.html',{'List':List,'Username':request.session['username']})
 
 def ALLpost(request):
     cursor=connection.cursor()
@@ -92,20 +95,20 @@ def ALLpost(request):
         list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
         List.append(list_s)
     
-    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
+    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':request.session['username']})
 
 def getPost(request):
     print(request.POST)
     cursor=connection.cursor()
     title=request.POST['Title']
     context=request.POST['Contents']
-    username=request.POST['Username']
+    username=request.session['username']
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, username])
     return redirect("/MinecraftDB/post/"+username+"/")
     
 
 def deletePost(request):
-    username=request.POST['Username'].replace("By","")
+    username=request.session['username'].replace("By","")
     title=request.POST['Title'].replace("Title：","")
     cursor=connection.cursor()
     cursor.execute("DELETE FROM MinecraftDB_member_diary WHERE Member_Diary_name LIKE'"+username+"' AND Title LIKE'"+title+"'")
@@ -118,4 +121,4 @@ def profile(request,username):
     # cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '%s' and Password LIKE '%s'",["ppaa","ppaa"])
     ans=cursor.fetchone()
     print(ans)
-    return render(request, 'static/profile/profile.html',{'Password':ans[2],'Account':ans[1],'Info':ans[3],'Username':username})
+    return render(request, 'static/profile/profile.html',{'Password':ans[2],'Account':ans[1],'Info':ans[3],'Username':request.session['username']})
