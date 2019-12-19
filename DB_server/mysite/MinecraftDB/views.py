@@ -81,8 +81,6 @@ def ALLpost(request):
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 
 def getPost(request):
-    List=[{'Poster':"willy",'Title':"loooooool",'content':"nooo"}]
-    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
-
-def neutral_mobs(request):
-    return render(request, 'static/main_page/neutral_mobs.html')
+    print(request.POST['title'])
+    print(inter)
+    return render(request, 'static/login/login.html')
