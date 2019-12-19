@@ -11,5 +11,4 @@ urlpatterns = [
     path('producer/', views.producer, name='producer'),
     path('post/<str:username>/', views.post, name='post'),
     path('ALLpost/', views.ALLpost, name='ALLpost'),
-    path('neutral_mobs/', views.neutral_mobs, name='neutral_mobs'),
 ]
