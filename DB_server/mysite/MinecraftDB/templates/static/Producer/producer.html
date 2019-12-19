@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -8,14 +9,13 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="../function.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Database-login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href='{% static "Producer/bootstrap.css" %}' rel="stylesheet">
 
 
     <style>
@@ -31,7 +31,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="cover_P.css" rel="stylesheet">
+    <link href='{% static "Producer/cover_P.css" %}' rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -51,7 +51,8 @@
 
             <div class="container">
                 <div class="img">
-                    <img src="img/註解 2019-12-12 130832.png" alt="">
+
+                    <img src='{% static "Producer/img/註解 2019-12-12 130832.png" %}' alt="">
                 </div>
                 <div class="profile">
                     <h2>Lulalabana</h2>
@@ -61,7 +62,7 @@
             </div>
             <div class="container">
                 <div class="img">
-                    <img src="./img/註解 2019-12-12 130930.png" alt="">
+                    <img src='{% static "Producer/img/註解 2019-12-12 130930.png" %}' alt="">
                 </div>
                 <div class="profile">
                     <h2>xxxddd12xd</h2>
@@ -73,7 +74,8 @@
 
             <div class="container">
                 <div class="img">
-                    <img src="img/註解 2019-12-12 130906.png" alt=" ">
+
+                    <img src='{% static "Producer/img/註解 2019-12-12 130906.png" %}' alt=" ">
                 </div>
                 <div class="profile ">
                     <h2>Dan</h2>
@@ -83,7 +85,7 @@
             </div>
             <div class="container ">
                 <div class="img ">
-                    <img src="img/註解 2019-12-12 130950.png " alt=" ">
+                    <img src='{% static "Producer/img/註解 2019-12-12 130950.png " %}' alt=" ">
                 </div>
                 <div class="profile ">
                     <h2>Arpan</h2>

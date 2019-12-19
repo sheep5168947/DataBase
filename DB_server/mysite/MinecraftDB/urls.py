@@ -11,4 +11,5 @@ urlpatterns = [
     path('producer/', views.producer, name='producer'),
     path('post/<str:username>/', views.post, name='post'),
     path('ALLpost/', views.ALLpost, name='ALLpost'),
+    path('profile/<str:username>/', views.profile, name='profile'),
 ]
