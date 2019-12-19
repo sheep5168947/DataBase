@@ -98,3 +98,7 @@ def ALLpost(request):
 def getPost(request):
     print(request.POST)
     return render(request, 'static/login/login.html')
+
+def deletePost(request):
+    print(request.POST)
+    return render(request, 'static/login/login.html')

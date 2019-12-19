@@ -12,4 +12,5 @@ urlpatterns = [
     path('post/<str:username>/', views.post, name='post'),
     path('ALLpost/', views.ALLpost, name='ALLpost'),
     path('getPost/', views.getPost, name='getPost'),
+    path('deletePost/', views.deletePost, name='deletePost'),
 ]
