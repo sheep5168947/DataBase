@@ -1,8 +1,11 @@
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import redirect
 from .models import Terrain
 from django.db import connection,transaction
+from django.views import View
 
 def index(request):
     return render(request,'MinecraftDB/index.html')
