@@ -95,6 +95,5 @@ def ALLpost(request):
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 
 def getPost(request):
-    print(request.POST['title'])
-    print(inter)
+    print(request.POST)
     return render(request, 'static/login/login.html')
