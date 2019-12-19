@@ -266,30 +266,20 @@
                     </form>
                 </div>
                 <div class="container" id="deletpost">
-                    <div class="well" style="background-color: bisque; border-radius: 15px; margin: 20px;">
-                        <div class="media" style="padding: 20px;">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://i2.hdslb.com/bfs/archive/1479e7b7e01ddd4e16ccbe03e35d5433642ab306.png" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{Title}}</h4>
-                                <p class="text-right">By{{Poster}}</p>
-                                <p>{{Content}}
+                    {% for item in List %}
+                        <div class="well" style="background-color: bisque; border-radius: 15px; margin: 20px;">
+                            <div class="media" style="padding: 20px;">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://placekitten.com/150/150" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">{{item.Title}}</h4>
+                                    <p class="text-right">By{{item.Poster}}</p>
+                                    <p>{{item.content}}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="well" style="background-color: bisque; border-radius: 15px;  margin: 20px; color: black;">
-                        <div class="media" style="padding: 20px;">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placekitten.com/150/150" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Title：別人家的貓咪</h4>
-                                <p class="text-right">By：Arpan</p>
-                                <p>為什麼別人家的貓咪這麼可愛我家的貓咪卻......歐不對我沒有養貓，幹好想養貓歐歐歐歐歐歐，可是我連我自己都養不起惹嗚嗚嗚QAQ。乃傑我要拿你的GIF 大暴亂改，然後分享給大家來表示我的憤怒我要氣死了可惡，但是我一定會被轉超過100圈，不過這點犧牲是值得的。
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
 
 
