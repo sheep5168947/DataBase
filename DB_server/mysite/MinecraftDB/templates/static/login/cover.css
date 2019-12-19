@@ -32,6 +32,8 @@ a:hover {
 
 html,
 body {
+    background-image: url("http://i2.hdslb.com/bfs/archive/58c3a4dc215860500af1d63b6bb4bb1095a54aa2.jpg");
+    
     height: 100%;
     background-color: #333;
 }
