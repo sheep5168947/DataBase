@@ -1,8 +1,11 @@
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import redirect
 from .models import Terrain
 from django.db import connection,transaction
+from django.views import View
 
 def index(request):
     return render(request,'MinecraftDB/index.html')
@@ -67,14 +70,28 @@ def producer(request):
     return render(request, 'static/Producer/producer.html')
 
 def post(request,username):
-    return render(request, 'static/post/post.html')
+    cursor=connection.cursor()
+    cursor.execute("select Member_Diary_name,Diary,Title from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
+    search_Diary=cursor.fetchall()
+    # print(search_Diary[0][0])
+    List=[]
+
+    for item in search_Diary:
+        list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
+        List.append(list_s)
+    print(List)
+    return render(request,'static/post/post.html',{'List':List,'Username':username})
 
 def ALLpost(request):
     cursor=connection.cursor()
     cursor.execute('select Member_Diary_name,Diary,Title from MinecraftDB_member_diary')
     search_Diary=cursor.fetchall()
+    # print(search_Diary)
+    List=[]
+    for item in search_Diary:
+        list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
+        List.append(list_s)
     
-    List=[{'Poster':"willy",'Title':"loooooool",'content':"nooo"}]
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 
 def getPost(request):
