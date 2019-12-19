@@ -36,6 +36,7 @@ def reply_login(request):
                 print("no ans")
                 return render(request, 'static/login/login.html',{'err_acc':"請輸入正確的 account 或 password"})
             else :
+                request.session['account'] = request.POST['account']
                 return redirect("/MinecraftDB/main/"+ans[0]+"/")         
         if('nickname' in request.POST):
             print(request.POST['nickname'])
@@ -48,10 +49,10 @@ def reply_login(request):
 
 def reply_post(request):
     print("get")
-    print(request.POST['Contents'])
+    print(request.POST['content'])
     cursor=connection.cursor()
     title=request.POST['title']
-    context=request.POST['Contents']
+    context=request.POST['content']
     print(title+" "+context)
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,"someone", context])
     #return render(request, 'MinecraftDB/login.html')
@@ -95,6 +96,6 @@ def ALLpost(request):
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 
 def getPost(request):
+    print(request.session['account'])
     print(request.POST['title'])
-    print(inter)
     return render(request, 'static/login/login.html')
