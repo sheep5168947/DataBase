@@ -105,7 +105,10 @@ def getPost(request):
     
 
 def deletePost(request):
-    print(request.POST)
+    username=request.POST['Username'].replace("By","")
+    title=request.POST['Title'].replace("Title：","")
+    cursor=connection.cursor()
+    cursor.execute("DELETE FROM MinecraftDB_member_diary WHERE Member_Diary_name LIKE'"+username+"' AND Title LIKE'"+title+"'")
     # print(request.session["username"])
     return render(request, 'static/login/login.html')
 

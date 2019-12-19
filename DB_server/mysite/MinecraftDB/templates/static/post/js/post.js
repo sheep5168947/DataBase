@@ -38,18 +38,13 @@ function sendForm()
       });
       window.location.href="/MinecraftDB/post/"+Username+"/";
 }
-var test=document.getElementById("Submit")
-test.addEventListener("click",sendForm)
-=======
-}
 function sendDeleteForm()
 {
     var token = $('input[name=csrfmiddlewaretoken]').val();
     var Username=document.getElementById("Poster").innerHTML
-    var Title=document.getElementById("PostTitle").value
+    var Title=document.getElementById("PostTitle").innerHTML
     console.log(Username)
     console.log(Title)
-    console.log(Contents)
 
     var obj = {
         csrfmiddlewaretoken: token,
@@ -68,11 +63,11 @@ function sendDeleteForm()
         data: obj ,
         dataType: json 
       });
+      //window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 var SubmitPost=document.getElementById("Submit")
 var DeletePost=document.getElementById("deletepost")
 console.log(DeletePost)
 SubmitPost.addEventListener("click",sendForm)
 DeletePost.addEventListener("click",sendDeleteForm)
->>>>>>> 917c887f21b4ebdea6a272a904014595ca195573
 
