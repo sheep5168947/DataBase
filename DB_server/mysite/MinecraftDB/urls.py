@@ -9,7 +9,7 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('main/<str:username>/', views.main, name='main'),
     path('producer/', views.producer, name='producer'),
-    path('post/', views.post, name='post'),
+    path('post/<str:username>/', views.post, name='post'),
     path('ALLpost/', views.ALLpost, name='ALLpost'),
     path('neutral_mobs/', views.neutral_mobs, name='neutral_mobs'),
 ]

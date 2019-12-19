@@ -66,10 +66,18 @@ def main(request,username):
 def producer(request):
     return render(request, 'static/Producer/producer.html')
 
-def post(request):
+def post(request,username):
     return render(request, 'static/post/post.html')
 
 def ALLpost(request):
+    cursor=connection.cursor()
+    cursor.execute('select Member_Diary_name,Diary,Title from MinecraftDB_member_diary')
+    search_Diary=cursor.fetchall()
+    
+    List=[{'Poster':"willy",'Title':"loooooool",'content':"nooo"}]
+    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
+
+def getPost(request):
     List=[{'Poster':"willy",'Title':"loooooool",'content':"nooo"}]
     return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
 

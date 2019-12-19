@@ -209,7 +209,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Username}}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="Username">{{Username}}</span>
                                 <img class="img-profile rounded-circle" name="Userpicture"
                                     src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
                             </a>
@@ -251,25 +251,48 @@
                     </div>
                 </div>
                 <!-- End of Content Wrapper -->
+
+                <script>
+                    $(document).ready(function () {
+                        var title = document.getElementsByName("Title").value;
+                        var content = document.getElementsByName("Contents").value;
+                        var username = document.getElementById("Username").value;
+                        $(".Submit").click(function () {
+                            $.post("/example/jquery/demo_test_post.asp",
+                                {
+                                    Poster:username,
+                                    Title: title,
+                                    Constents: content
+                                },
+                               );
+                        });
+                    });
+                </script>
                 <div style="padding-left: 20%;padding-right: 20%;display: block;" id="addpost">
                     <form action="/MinecraftDB/reply_post/" method="POST">
                         {% csrf_token %}
                         <div class=" form-group ">
                             <label> 標題</label>
-                            <input type=" text " class=" form-control " placeholder=" 輸入標題" name="title">
+                            <input type=" text " class=" form-control " placeholder=" 輸入標題" name="Title">
                         </div>
                         <div class=" form-group ">
                             <label> 內文</label>
                             <textarea class=" form-control " rows=" 10 " placeholder="輸入內文" name="Contents"></textarea>
                         </div>
-                        <input href="#" class="btn btn-primary" type="Submit" value="Submit" action="Submit">
+                        <input href="#" class="btn btn-primary" type="Submit" value="Submit" action="Submit" id="Submit">
                     </form>
                 </div>
-                <div class="container" id="deletpost">
+                <div class="container" id="deletpost" style="display: none;">
                     <div class="well" style="background-color: bisque; border-radius: 15px; margin: 20px;">
+                        <button type="button" class="close" aria-label="Close"
+                            style="padding-right: 20px; padding-top: 20px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         <div class="media" style="padding: 20px;">
+
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://i2.hdslb.com/bfs/archive/1479e7b7e01ddd4e16ccbe03e35d5433642ab306.png" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
+                                <img class="media-object" src="http://placekitten.com/150/150"
+                                    style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">{{Title}}</h4>
@@ -278,15 +301,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="well" style="background-color: bisque; border-radius: 15px;  margin: 20px; color: black;">
+                    <div class="well"
+                        style="background-color: bisque; border-radius: 15px;  margin: 20px; color: black;">
+                        <button type="button" class="close" aria-label="Close"
+                            style="padding-right: 20px; padding-top: 20px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         <div class="media" style="padding: 20px;">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placekitten.com/150/150" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
+                                <img class="media-object" src="http://placekitten.com/150/150"
+                                    style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Title：別人家的貓咪</h4>
                                 <p class="text-right">By：Arpan</p>
-                                <p>為什麼別人家的貓咪這麼可愛我家的貓咪卻......歐不對我沒有養貓，幹好想養貓歐歐歐歐歐歐，可是我連我自己都養不起惹嗚嗚嗚QAQ。乃傑我要拿你的GIF 大暴亂改，然後分享給大家來表示我的憤怒我要氣死了可惡，但是我一定會被轉超過100圈，不過這點犧牲是值得的。
+                                <p>為什麼別人家的貓咪這麼可愛我家的貓咪卻......歐不對我沒有養貓，幹好想養貓歐歐歐歐歐歐，可是我連我自己都養不起惹嗚嗚嗚QAQ。乃傑我要拿你的GIF
+                                    大暴亂改，然後分享給大家來表示我的憤怒我要氣死了可惡，但是我一定會被轉超過100圈，不過這點犧牲是值得的。
                             </div>
                         </div>
                     </div>
