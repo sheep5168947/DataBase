@@ -1,4 +1,4 @@
-var IDD=0
+var IDD=""
 function addpost(){
     document.getElementById("addpost").style.display = "block";
     document.getElementById("deletpost").style.display = "none";
@@ -73,7 +73,6 @@ function sendEditForm()
     var postID=document.querySelector(".goddamnhide").innerHTML
     console.log(Username)
     console.log(Title)
-    postID=string(IDD)
     var obj = {
         postID:IDD,
         Contents:Contents,
@@ -102,7 +101,7 @@ var EditPost=document.getElementById("editpost")
 console.log(DeletePost)
 SubmitPost.addEventListener("click",sendForm)
 DeletePost.addEventListener("click",sendDeleteForm)
-EditPost.addEventListener("click",sendEditForm())
+EditPost.addEventListener("click",sendEditForm)
 
 function ontest(obj){
     IDD=obj.querySelector(".goddamnhide").innerHTML
