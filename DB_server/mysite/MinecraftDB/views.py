@@ -80,8 +80,12 @@ def post(request,username):
         List.append(list_s)
     # print(List)
     # request.session["username"] = username
-    return render(request,'static/post/post.html',{'List':List,'Username':username})
-
+    if len(List)==0:
+        print("no")
+        return render(request,'static/post/post.html',{'List':List,'Username':username,'ALTER':"目前沒有貼文，去發你的第一篇貼文吧!!"})
+    else:
+        print("yes")
+        return render(request,'static/post/post.html',{'List':List,'Username':username})
 def ALLpost(request):
     cursor=connection.cursor()
     cursor.execute('select Member_Diary_name,Diary,Title from MinecraftDB_member_diary')
@@ -105,7 +109,7 @@ def getPost(request):
     
 
 def deletePost(request):
-    username=request.POST['Username'].replace("By","")
+    username=request.POST['Username'].replace("By ","")
     title=request.POST['Title'].replace("Title：","")
     cursor=connection.cursor()
     cursor.execute("DELETE FROM MinecraftDB_member_diary WHERE Member_Diary_name LIKE'"+username+"' AND Title LIKE'"+title+"'")

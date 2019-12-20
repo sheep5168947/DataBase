@@ -36,7 +36,8 @@ function sendForm()
         data: obj ,
         dataType: json 
       });
-      window.location.href="/MinecraftDB/post/"+Username+"/";
+      window.location.reload();
+    //   window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 function sendDeleteForm()
 {
@@ -63,6 +64,7 @@ function sendDeleteForm()
         data: obj ,
         dataType: json 
       });
+      window.location.reload();
       //window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 
@@ -90,6 +92,7 @@ function sendEditForm()
         data: obj ,
         dataType: json 
       });
+      window.location.reload();
       //window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 
