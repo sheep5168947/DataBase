@@ -1,4 +1,6 @@
 var IDD=""
+var delID=""
+
 function addpost(){
     document.getElementById("addpost").style.display = "block";
     document.getElementById("deletpost").style.display = "none";
@@ -36,7 +38,9 @@ function sendForm()
         data: obj ,
         dataType: json 
       });
-      window.location.reload();
+    setTimeout(function(){
+        window.location.reload();
+    },200);
     //   window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 function sendDeleteForm()
@@ -51,6 +55,7 @@ function sendDeleteForm()
         csrfmiddlewaretoken: token,
         Username :Username,
         Title : Title,
+        ID:delID,
     };
      var json = JSON.stringify(obj);
     // var request = new XMLHttpRequest(); // xhr() 會建立非同步物件
@@ -64,7 +69,10 @@ function sendDeleteForm()
         data: obj ,
         dataType: json 
       });
-      window.location.reload();
+    setTimeout(function(){
+        window.location.reload();
+    },200);
+      
       //window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 
@@ -92,7 +100,10 @@ function sendEditForm()
         data: obj ,
         dataType: json 
       });
-      window.location.reload();
+    setTimeout(function(){
+        window.location.reload();
+    },200);
+    //   window.location.reload();
       //window.location.href="/MinecraftDB/post/"+Username+"/";
 }
 
@@ -101,7 +112,7 @@ var SubmitPost=document.getElementById("Submit")
 var DeletePost=document.getElementById("deletepost")
 var EditPost=document.getElementById("editpost")
 
-console.log(DeletePost)
+
 SubmitPost.addEventListener("click",sendForm)
 DeletePost.addEventListener("click",sendDeleteForm)
 EditPost.addEventListener("click",sendEditForm)
@@ -109,4 +120,8 @@ EditPost.addEventListener("click",sendEditForm)
 function ontest(obj){
     IDD=obj.querySelector(".goddamnhide").innerHTML
     console.log(IDD)
+}
+function delObj(obj){
+    delID=obj.querySelector(".goddamnhide").innerHTML
+    console.log(delObj)
 }

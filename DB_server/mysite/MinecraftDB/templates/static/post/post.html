@@ -255,8 +255,9 @@
                     {{ALTER}}
                     {% for item in List %}
                     <div class="well" style="background-color: bisque; border-radius: 15px;  margin: 20px; color: black;">
-                        <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#DeletePostModal" style="padding-right: 20px; padding-top: 20px;">
-                        <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#DeletePostModal" style="padding-right: 20px; padding-top: 20px;" onclick="delObj(this)">
+                            <span aria-hidden="true">&times;</span>
+                            <div class="goddamnhide">{{item.id}}</div>
                         </button>
                         <button type="button" class="close " aria-label="Close" data-toggle="modal" data-target="#EditPostModal" style="padding-right: 20px; padding-top: 20px;" onclick="ontest(this)">
                             <i class="fas fa-edit"></i>
