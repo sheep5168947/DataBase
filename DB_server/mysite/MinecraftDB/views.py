@@ -141,7 +141,7 @@ def signup(request):
     return render(request,'static/sign_up/signup.html')
 
 def aggressive_mobs(request):
-    return render(request, 'static/main_page/aggressive_mobs.html')
+    return render(request, 'static/main_page/aggressive_mobs.html',{'Username':request.session['username']})
 
 def neutral_mobs(request):
     return render(request, 'static/main_page/neutral_mobs.html')
@@ -161,7 +161,7 @@ def tools(request):
 def foods(request):
     return render(request, 'static/main_page/foods.html')
 
-def tools(request):
+def building_materials(request):
     return render(request, 'static/main_page/tools.html')
 
 def ores(request):

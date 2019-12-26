@@ -26,4 +26,5 @@ urlpatterns = [
     path('ores/', views.ores, name='ores'),
     path('biome/', views.biome, name='biome'),
     path('structures/', views.structures, name='structures'),
+    path('building_materials/',views.building_materials,name='building_materials')
 ]
