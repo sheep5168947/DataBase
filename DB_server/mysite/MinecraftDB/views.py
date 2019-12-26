@@ -45,7 +45,7 @@ def reply_login(request):
                 request.session['username'] = request.POST['account']
                 request.session['flag'] =  '0'
                 
-                return redirect("/MinecraftDB/main/"+ans[0]+"/")
+                return redirect("/MinecraftDB/main/"+request.session['username']+"/")
         if('nickname' in request.POST):
             print(request.POST['nickname'])
             if(request.POST['nickname'] == ""):
