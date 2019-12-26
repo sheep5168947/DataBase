@@ -104,7 +104,6 @@ def getPost(request):
     cursor=connection.cursor()
     title=request.POST['Title']
     context=request.POST['Contents']
-    username=request.POST['Username']
     cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, request.session['username']])
     return redirect("/MinecraftDB/post/"+request.session['username']+"/")
     
