@@ -16,5 +16,5 @@ urlpatterns = [
     path('deletePost/', views.deletePost, name='deletePost'),
     path('profile/<str:username>/', views.profile, name='profile'),
     path('editPost/', views.editPost, name='editPost'),
-    
+    path('aggressive_mobs/', views.aggressive_mobs, name='aggressive_mobs'),
 ]
