@@ -142,3 +142,33 @@ def signup(request):
 
 def aggressive_mobs(request):
     return render(request, 'static/main_page/aggressive_mobs.html')
+
+def neutral_mobs(request):
+    return render(request, 'static/main_page/neutral_mobs.html')
+
+def Overworld(request):
+    return render(request, 'static/main_page/Overworld.html')
+
+def Nether(request):
+    return render(request, 'static/main_page/Nether.html')
+
+def End(request):
+    return render(request, 'static/main_page/End.html')
+
+def tools(request):
+    return render(request, 'static/main_page/tools.html')
+
+def foods(request):
+    return render(request, 'static/main_page/foods.html')
+
+def tools(request):
+    return render(request, 'static/main_page/tools.html')
+
+def ores(request):
+    return render(request, 'static/main_page/ores.html')
+
+def biome(request):
+    return render(request, 'static/main_page/biome.html')
+
+def structures(request):
+    return render(request, 'static/main_page/structures.html')
