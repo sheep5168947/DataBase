@@ -196,7 +196,7 @@ def foods(request):
 
 
 def building_materials(request):
-    return render(request, 'static/main_page/tools.html')
+    return render(request, 'static/main_page/building_materials.html')
 
 
 def ores(request):
