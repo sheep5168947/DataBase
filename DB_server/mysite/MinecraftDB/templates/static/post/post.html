@@ -231,13 +231,13 @@
                     </div>
                     <div style="margin-bottom: 50px;">
                         <button type="button" class="btn btn-outline-warning" onclick="addpost()">新增Post</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="deletpost()">刪除Post</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="deletpost()">我的Post</button>
                     </div>
                 </div>
                 <!-- End of Content Wrapper -->
 
 
-                <div style="padding-left: 20%;padding-right: 20%;display: block;" id="addpost">
+                <div style="padding-left: 20%;padding-right: 20%;display: none;" id="addpost">
 
                     {% csrf_token %}
                     <div class=" form-group ">
@@ -251,11 +251,13 @@
                     <input href="#" class="btn btn-primary" type="Submit" value="Submit" action="Submit" id="Submit">
 
                 </div>
-                <div class="container" id="deletpost" style="display: none;">
+                <div class="container" id="deletpost" style="display: block;">
+                    {{ALTER}}
                     {% for item in List %}
                     <div class="well" style="background-color: bisque; border-radius: 15px;  margin: 20px; color: black;">
-                        <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#DeletePostModal" style="padding-right: 20px; padding-top: 20px;">
-                        <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#DeletePostModal" style="padding-right: 20px; padding-top: 20px;" onclick="delObj(this)">
+                            <span aria-hidden="true">&times;</span>
+                            <div class="goddamnhide">{{item.id}}</div>
                         </button>
                         <button type="button" class="close " aria-label="Close" data-toggle="modal" data-target="#EditPostModal" style="padding-right: 20px; padding-top: 20px;" onclick="ontest(this)">
                             <i class="fas fa-edit"></i>
@@ -267,7 +269,7 @@
                             </a>
                             <div class="media-body">
                                 <h4 id="PostTitle" class="media-heading">Title：{{item.Title}}</h4>
-                                <p id="Poster" class="text-right">By{{item.Poster}}</p>
+                                <p id="Poster" class="text-right">By {{item.Poster}}</p>
                                 <div class="contentContainer">
                                     <p>{{item.content}}</div>
                             </div>
@@ -316,7 +318,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a id="deletepost" class="btn btn-primary" href="/MinecraftDB/post/lulalabana/">Sure</a>
+                                <a id="deletepost" class="btn btn-primary">Sure</a>
                             </div>
                         </div>
                     </div>
@@ -335,7 +337,7 @@
                             <textarea class=" form-control " rows=" 10 " placeholder="輸入內文" id="EditContents"></textarea>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a id="editpost" class="btn btn-primary" href="http://127.0.0.1:8000/MinecraftDB/post/lulalabana/">Sure</a>
+                                <a id="editpost" class="btn btn-primary">Sure</a>
                             </div>
                         </div>
                     </div>
