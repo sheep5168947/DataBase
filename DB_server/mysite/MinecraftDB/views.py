@@ -36,13 +36,14 @@ def reply_login(request):
                 print("no ans")
                 return render(request, 'static/login/login.html',{'err_acc':"請輸入正確的 account 或 password"})
             else :
-                # request.session["username"] = ans[0]
+                request.session['username'] = request.POST['account']
                 return redirect("/MinecraftDB/main/"+ans[0]+"/")         
         if('nickname' in request.POST):
             print(request.POST['nickname'])
             if(request.POST['nickname']==""):
                 return render(request, 'static/login/login.html',{'no_nike':"請輸入nickname"})
             else:
+                request.session['username'] = request.POST['nickname']
                 return redirect("/MinecraftDB/main/"+"guest"+"/")
         # DB尋找
 
@@ -65,14 +66,14 @@ def main(request,username):
     cursor=connection.cursor()
     cursor.execute('select Introduction_text from MinecraftDB_Terrain')
     search_object=cursor.fetchone()[0]
-    return render(request, 'static/main_page/main.html',{'Username':username})
+    return render(request, 'static/main_page/main.html',{'Username':request.session['username']})
 
 def producer(request):
     return render(request, 'static/Producer/producer.html')
 
 def post(request,username):
     cursor=connection.cursor()
-    cursor.execute("select Member_Diary_name,Diary,Title,id from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+username+"'")
+    cursor.execute("select Member_Diary_name,Diary,Title,id from MinecraftDB_member_diary WHERE Member_Diary_name LIKE '"+request.session['username']+"'")
     search_Diary=cursor.fetchall()
     List=[]
     for item in search_Diary:
@@ -82,10 +83,10 @@ def post(request,username):
     # request.session["username"] = username
     if len(List)==0:
         print("no")
-        return render(request,'static/post/post.html',{'List':List,'Username':username,'ALTER':"目前沒有貼文，去發你的第一篇貼文吧!!"})
+        return render(request,'static/post/post.html',{'List':List,'Username':request.session['username'],'ALTER':"目前沒有貼文，去發你的第一篇貼文吧!!"})
     else:
         print("yes")
-        return render(request,'static/post/post.html',{'List':List,'Username':username})
+        return render(request,'static/post/post.html',{'List':List,'Username':request.session['username']})
 def ALLpost(request):
     cursor=connection.cursor()
     cursor.execute('select Member_Diary_name,Diary,Title from MinecraftDB_member_diary')
@@ -96,7 +97,7 @@ def ALLpost(request):
         list_s={'Poster':item[0],'Title':item[2],'content':item[1]}
         List.append(list_s)
     
-    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':'lulalabana'})
+    return render(request, 'static/Allpost/Allpost.html',{'List':List,'Username':request.session['username']})
 
 def getPost(request):
     print(request.POST)
@@ -104,8 +105,8 @@ def getPost(request):
     title=request.POST['Title']
     context=request.POST['Contents']
     username=request.POST['Username']
-    cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, username])
-    return redirect("/MinecraftDB/post/"+username+"/")
+    cursor.execute("INSERT INTO MinecraftDB_member_diary (Title, Diary,Member_Diary_name) values (%s, %s,%s)", [title,context, request.session['username']])
+    return redirect("/MinecraftDB/post/"+request.session['username']+"/")
     
 
 def deletePost(request):
@@ -121,15 +122,15 @@ def deletePost(request):
 
 def profile(request,username):
     cursor=connection.cursor()
-    cursor.execute("select Member_name,Account_number,Password,Profile from MinecraftDB_member where Member_name LIKE '"+username+"'")
+    cursor.execute("select Member_name,Account_number,Password,Profile from MinecraftDB_member where Member_name LIKE '"+request.session['username']+"'")
     # cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '%s' and Password LIKE '%s'",["ppaa","ppaa"])
     ans=cursor.fetchone()
     print(ans)
-    return render(request, 'static/profile/profile.html',{'Password':ans[2],'Account':ans[1],'Info':ans[3],'Username':username})
+    return render(request, 'static/profile/profile.html',{'Password':ans[2],'Account':ans[1],'Info':ans[3],'Username':request.session['username']})
 
 def editPost(request):
     print(request.POST)
-    ID=request.POST['postID']
+    ID=request.POST['postID']   
     content=request.POST['Contents']
     print(ID,content)
     cursor=connection.cursor()
