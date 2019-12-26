@@ -140,3 +140,6 @@ def editPost(request):
 
 def signup(request):
     return render(request,'static/sign_up/signup.html')
+
+def aggressive_mobs(request):
+    return render(request, 'static/main_page/aggressive_mobs.html')
