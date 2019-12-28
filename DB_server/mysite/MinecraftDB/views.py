@@ -42,7 +42,7 @@ def reply_login(request):
                 print("no ans")
                 return render(request, 'static/login/login.html', {'err_acc': "請輸入正確的 account 或 password"})
             else:
-                request.session['username'] = request.POST['account']
+                request.session['username'] = ans[0]
                 request.session['flag'] =  '0'
                 
                 return redirect("/MinecraftDB/main/"+request.session['username']+"/")
@@ -141,7 +141,7 @@ def deletePost(request):
     return render(request, 'static/login/login.html')
 
 
-def profile(request, username):
+def profile(request):
     cursor = connection.cursor()
     cursor.execute("select Member_name,Account_number,Password,Profile from MinecraftDB_member where Member_name LIKE '" +
                    request.session['username']+"'")
@@ -209,6 +209,9 @@ def biome(request):
 
 def structures(request):
     return render(request, 'static/main_page/structures.html')
+
+def Steve(request):
+    return render(request, 'static/main_page/Steve.html')
 
 
 def backtomain(request):
