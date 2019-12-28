@@ -624,7 +624,7 @@ pre code {
     margin-left: auto
 }
 
-.inner {
+.row.inner {
     margin-left: 40%!important;
 }
 
