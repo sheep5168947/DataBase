@@ -37,7 +37,7 @@ def reply_login(request):
                            request.POST['account']+"' and Password LIKE '"+request.POST['password']+"'")
             # cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '%s' and Password LIKE '%s'",["ppaa","ppaa"])
             ans = cursor.fetchone()
-            # print(ans)
+            #print(ans[0])
             if ans is None:
                 print("no ans")
                 return render(request, 'static/login/login.html', {'err_acc': "請輸入正確的 account 或 password"})
@@ -168,11 +168,29 @@ def signup(request):
 
 
 def aggressive_mobs(request):
-    return render(request, 'static/main_page/aggressive_mobs.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute(
+        'select MinecraftDB_attack_creature.id,Attack_Creature_name,Search_range,HealthPoints,Attack from MinecraftDB_attack_creature,MinecraftDB_creature where Attack_Creature_name=Creature_name')
+    search_attack_creature = cursor.fetchall()
+    print(search_attack_creature)
+    List = []
+    for item in search_attack_creature:
+        list_s = {'mob_id': item[0], 'mob_name': item[1], 'mob_search_range': item[2],'HP':item[3],'attack':item[4]}
+        List.append(list_s)
+    return render(request, 'static/main_page/aggressive_mobs.html', {'Username': request.session['username'],'List':List})
 
 
 def neutral_mobs(request):
-    return render(request, 'static/main_page/neutral_mobs.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute(
+        'select MinecraftDB_neutral_creature.id,Neutral_Creature_name,HealthPoints,Attack,Can_grow,Can_Trap from MinecraftDB_neutral_creature,MinecraftDB_creature where Neutral_Creature_name=Creature_name')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'mob_id': item[0], 'mob_name': item[1], 'HP': item[2],'Attack':item[3],'can_grow':item[4],'can_trap':item[5]}
+        List.append(list_s)
+    return render(request, 'static/main_page/neutral_mobs.html',{'Username': request.session['username'],'List':List})
 
 
 def Overworld(request):
@@ -192,15 +210,43 @@ def tools(request):
 
 
 def foods(request):
-    return render(request, 'static/main_page/foods.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute(
+        'select MinecraftDB_food.id,Food_name,Satiety,Rarity,Max_Quantity from MinecraftDB_food,MinecraftDB_item where Food_name=Item_name')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1], 'Satiety': item[2],'Rarity':item[3],'Max_Quanity':item[4]}
+        List.append(list_s)
+    return render(request, 'static/main_page/foods.html',{'Username': request.session['username'],'List':List})
 
 
 def building_materials(request):
-    return render(request, 'static/main_page/building_materials.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute(
+        'select MinecraftDB_building_materials.id,Building_Materials_name,Texture,Anti_Riot,Rarity,Max_Quantity from MinecraftDB_building_materials LEFT OUTER JOIN MinecraftDB_item on Building_Materials_name=Item_name')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1], 'Texture': item[2],'Anti_Riot': item[3],'Rarity':item[4],'Max_Quanity':item[5]}
+        List.append(list_s)
+    return render(request, 'static/main_page/building_materials.html',{'Username': request.session['username'],'List':List})
+
 
 
 def ores(request):
-    return render(request, 'static/main_page/ores.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute(
+        'select MinecraftDB_mineral.id,Mineral_name,Generate_Range,Rarity,Max_Quantity from MinecraftDB_mineral LEFT OUTER JOIN MinecraftDB_item on Mineral_name=Item_name')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1], 'range': item[2],'Rarity':item[3],'Max_Quanity':item[4]}
+        List.append(list_s)
+    return render(request, 'static/main_page/ores.html',{'Username': request.session['username'],'List':List})
 
 
 def biome(request):
