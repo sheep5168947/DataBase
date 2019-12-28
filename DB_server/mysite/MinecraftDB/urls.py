@@ -16,5 +16,16 @@ urlpatterns = [
     path('deletePost/', views.deletePost, name='deletePost'),
     path('profile/<str:username>/', views.profile, name='profile'),
     path('editPost/', views.editPost, name='editPost'),
-    
+    path('aggressive_mobs/', views.aggressive_mobs, name='aggressive_mobs'),
+    path('neutral_mobs/', views.neutral_mobs, name='neutral_mobs'),
+    path('Overworld/', views.Overworld, name='Overworld'),
+    path('Nether/', views.Nether, name='Nether'),
+    path('End/', views.End, name='End'),
+    path('tools/', views.tools, name='tools'),
+    path('foods/', views.foods, name='foods'),
+    path('ores/', views.ores, name='ores'),
+    path('biome/', views.biome, name='biome'),
+    path('structures/', views.structures, name='structures'),
+    path('building_materials/',views.building_materials,name='building_materials'),
+    path('backtomain/',views.backtomain,name='backtomain')
 ]

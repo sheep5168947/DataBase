@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -15,7 +16,7 @@
     <title>Database-login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../sign_up/bootstrap.css" rel="stylesheet">
+    <link href='{% static "login/bootstrap.css" %}' rel="stylesheet">
 
 
     <style>
@@ -31,7 +32,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href=..sign_up/cover.css rel="stylesheet">
+    <link href='{% static "sign_up/cover.css" %}' rel="stylesheet">
 </head>
 
 <body class="text-center">

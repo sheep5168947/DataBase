@@ -38,21 +38,28 @@
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../main page/main.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-compass"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
-            </a>
-
+            <form action="/MinecraftDB/backtomain/" method="POST">
+                {% csrf_token %}
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/MinecraftDB/backtomain/">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
+                </a>
+            </form>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="../main page/main.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>主頁</span></a>
+                <form action="/MinecraftDB/backtomain/" method="POST">
+                    {% csrf_token %}
+                    <a class="nav-link" href="/MinecraftDB/backtomain/">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>主頁</span></a>
+
+                </form>
+
             </li>
 
             <!-- Divider -->

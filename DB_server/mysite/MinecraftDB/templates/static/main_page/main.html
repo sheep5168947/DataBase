@@ -34,21 +34,28 @@
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-compass"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
-            </a>
+            <form action="/MinecraftDB/backtomain/" method="POST">
+                {% csrf_token %}
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/MinecraftDB/backtomain/">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
+                </a>
+            </form>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>主頁</span></a>
+                <form action="/MinecraftDB/backtomain/" method="POST">
+                    {% csrf_token %}
+                    <a class="nav-link" href="/MinecraftDB/backtomain/">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>主頁</span></a>
+
+                </form>
             </li>
 
             <!-- Divider -->
@@ -68,7 +75,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">生物:</h6>
-                        <a class="collapse-item" href="攻擊型生物.html">攻擊型生物</a>
+                        <a class="collapse-item" href="/MinecraftDB/aggressive_mobs">攻擊型生物</a>
                         <a class="collapse-item" href="/MinecraftDB/neutral_mobs">中立型生物</a>
                     </div>
                 </div>
@@ -85,9 +92,9 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">世界:</h6>
-                        <a class="collapse-item" href="主世界.html">主世界</a>
-                        <a class="collapse-item" href="地獄.html">地獄</a>
-                        <a class="collapse-item" href="終界.html">終界</a>
+                        <a class="collapse-item" href="/MinecraftDB/Overworld">主世界</a>
+                        <a class="collapse-item" href="/MinecraftDB/Nether">地獄</a>
+                        <a class="collapse-item" href="/MinecraftDB/End">終界</a>
                     </div>
                 </div>
             </li>
@@ -101,10 +108,10 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">道具:</h6>
-                        <a class="collapse-item" href="tools.html">工具</a>
-                        <a class="collapse-item" href="食物.html">食物</a>
-                        <a class="collapse-item" href="建材.html">建材</a>
-                        <a class="collapse-item" href="礦物.html">礦物</a>
+                        <a class="collapse-item" href="/MinecraftDB/tools">工具</a>
+                        <a class="collapse-item" href="/MinecraftDB/foods">食物</a>
+                        <a class="collapse-item" href="/MinecraftDB/building_materials">建材</a>
+                        <a class="collapse-item" href="/MinecraftDB/ores">礦物</a>
                     </div>
                 </div>
             </li>
@@ -112,7 +119,7 @@
 
             <!-- Nav Item - 地形 -->
             <li class="nav-item">
-                <a class="nav-link" href="地形.html">
+                <a class="nav-link" href="/MinecraftDB/biome">
                     <i class="fas fa-mountain"></i>
                     <span>地形</span></a>
             </li>
@@ -120,7 +127,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="結構.html">
+                <a class="nav-link" href="/MinecraftDB/structures">
                     <i class="fas fa-gopuram"></i>
                     <span>結構</span></a>
                 <div class="topbar-divider d-none d-sm-block"></div>
@@ -198,7 +205,7 @@
                                 <a class="dropdown-item" href="/MinecraftDB/profile/">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 個人簡介
                                 </a>
-                                <a class="dropdown-item" href="/MinecraftDB/post/lulalabana">
+                                <a class="dropdown-item" href="/MinecraftDB/post/getpost/">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 新增/刪除貼文
                                 </a>
                                 <a class="dropdown-item" href="/MinecraftDB/ALLpost">
