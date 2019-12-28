@@ -624,6 +624,10 @@ pre code {
     margin-left: auto
 }
 
+.row.inner {
+    margin-left: 40%!important;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -3651,7 +3655,7 @@ input[type=submit].btn-block {
     opacity: 0
 }
 
-.hide{
+.hide {
     display: none;
 }
 

@@ -144,6 +144,11 @@
                     <span>結構</span></a>
                 <div class="topbar-divider d-none d-sm-block"></div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/MinecraftDB/Steve">
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                    <span>史蒂夫戰鬥力計算機</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -212,7 +217,7 @@
                         </li>
 
 
-
+                        <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -265,7 +270,7 @@
 
                         <!-- Content Row -->
 
-                        <div class="row">
+                        <div class="row inner">
 
                             <!-- Area Chart -->
                             <div class="table">
@@ -363,7 +368,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="../login/login.html">Logout</a>
+                        <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
                     </div>
                 </div>
             </div>
@@ -376,7 +381,7 @@
 
 
         <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+        <script src='{% static "main_page/js/sb-admin-2.min.js" %}'></script>
 
 </body>
 

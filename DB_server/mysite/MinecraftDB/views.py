@@ -141,7 +141,7 @@ def deletePost(request):
     return render(request, 'static/login/login.html')
 
 
-def profile(request, username):
+def profile(request):
     cursor = connection.cursor()
     cursor.execute("select Member_name,Account_number,Password,Profile from MinecraftDB_member where Member_name LIKE '" +
                    request.session['username']+"'")
@@ -194,19 +194,19 @@ def neutral_mobs(request):
 
 
 def Overworld(request):
-    return render(request, 'static/main_page/Overworld.html')
+    return render(request, 'static/main_page/Overworld.html', {'Username': request.session['username']})
 
 
 def Nether(request):
-    return render(request, 'static/main_page/Nether.html')
+    return render(request, 'static/main_page/Nether.html', {'Username': request.session['username']})
 
 
 def End(request):
-    return render(request, 'static/main_page/End.html')
+    return render(request, 'static/main_page/End.html', {'Username': request.session['username']})
 
 
 def tools(request):
-    return render(request, 'static/main_page/tools.html')
+    return render(request, 'static/main_page/tools.html', {'Username': request.session['username']})
 
 
 def foods(request):
@@ -250,11 +250,14 @@ def ores(request):
 
 
 def biome(request):
-    return render(request, 'static/main_page/biome.html')
+    return render(request, 'static/main_page/biome.html', {'Username': request.session['username']})
 
 
 def structures(request):
-    return render(request, 'static/main_page/structures.html')
+    return render(request, 'static/main_page/structures.html', {'Username': request.session['username']})
+
+def Steve(request):
+    return render(request, 'static/main_page/Steve.html', {'Username': request.session['username']})
 
 
 def backtomain(request):

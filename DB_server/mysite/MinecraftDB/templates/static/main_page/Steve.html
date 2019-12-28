@@ -10,19 +10,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title hre>Database Project No.6-主頁</title>
+    <title hre>Database Project No.6-食物</title>
 
     <!-- Custom fonts for this template-->
-
-    <script src='{% static "Allpost/js/post.js" %}'></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <title hre>Database Project No.6-主頁</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <title hre>Database Project No.6-食物</title>
+    <script src="../function.js"></script>
+    <!-- Custom fonts for this template-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <link href='{% static "main_page/css/sb-admin-2.min.css" %}' rel="stylesheet">
 
-    <link href='{% static "Allpost/css/sb-admin-2.min.css" %}' rel="stylesheet">
+    <!-- Custom styles for this template-->
     <script src="https://kit.fontawesome.com/2e21094afd.js" crossorigin="anonymous"></script>
 </head>
 
@@ -38,13 +42,15 @@
             <!-- Sidebar - Brand -->
             <form action="/MinecraftDB/backtomain/" method="POST">
                 {% csrf_token %}
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/MinecraftDB/backtomain/">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                    href="/MinecraftDB/backtomain/">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-compass"></i>
                     </div>
                     <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
                 </a>
             </form>
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -70,7 +76,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-paw"></i>
                     <span>生物</span>
                 </a>
@@ -87,11 +94,13 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
                     <i class="fas fa-globe-asia"></i>
                     <span>世界</span>
                 </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">世界:</h6>
                         <a class="collapse-item" href="/MinecraftDB/Overworld">主世界</a>
@@ -103,7 +112,8 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-hamburger"></i>
                     <span>道具</span>
                 </a>
@@ -166,9 +176,11 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -182,14 +194,18 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -202,26 +218,29 @@
 
 
                         <div class="topbar-divider d-none d-sm-block"></div>
-                        
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Username}}</span>
-                                <img class="img-profile rounded-circle" name="Userpicture" src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
+                                <img class="img-profile rounded-circle"
+                                    src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="/MinecraftDB/profile/">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 個人簡介
                                 </a>
-                                <a class="dropdown-item" href="/MinecraftDB/post/getPost">
+                                <a class="dropdown-item" href="/MinecraftDB/post/getpost/">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 新增/刪除貼文
                                 </a>
                                 <a class="dropdown-item" href="/MinecraftDB/ALLpost">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 所有貼文
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MinecraftDB/login/" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/MinecraftDB/login" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> 登出
                                 </a>
                             </div>
@@ -236,67 +255,84 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center" style="margin-bottom: 50px;">
-                        <h1 class="h3 mb-0 text-gray-800">AllPost</h1>
+                    <div class="d-sm-flex align-items-center justify-content-main mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">史蒂夫戰鬥力計算機</h1>
+                        <a href="../main page/main.html"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-edit"></i> Edit</a>
                     </div>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <p>Steve</p>
+                    </div>
+                    <!-- Content Row -->
+                    <div style="display: flex;">
+                        <div style="background-color: antiquewhite; width: 50px;height: 50px;">
+
+
+                        </div>
+                        <div>
+                            <img src="https://www.fotolip.com/wp-content/uploads/2016/05/Minecraft-Steve-4.jpg" alt="">
+
+                        </div>
+                        <div style="background-color: azure; width: 50px;height: 50px;">
+
+                        </div>
+
+                    </div>
+
+                    <!-- End of Main Content -->
+
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; NUK CSIE team.No6 2019</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
                 </div>
                 <!-- End of Content Wrapper -->
-                {% for item in List %}
-                <div class="container">
 
-                    <div class="well" style="background-color: bisque; border-radius: 15px; margin: 20px;">
-                        <div class="media" style="padding: 20px;">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placekitten.com/150/150" style="border-radius: 50%; padding: 10px; width: 200px;height: 200px;">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{item.Title}}</h4>
-                                <p class="text-right">By {{item.Poster}}</p>
-                                <p>{{item.content}}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                {% endfor %}
-                <a class="scroll-to-top rounded" href="#page-top">
-                    <i class="fas fa-angle-up"></i>
-                </a>
-
-                <!-- Logout Modal-->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bootstrap core JavaScript-->
-                <script src='{% static "Allpost/vendor/jquery/jquery.min.js" %}'></script>
-                <script src='{% static "Allpost/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-                <!-- Custom scripts for all pages-->
-                <script src='{% static "Allpost/js/sb-admin-2.min.js" %}'></script>
             </div>
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; NUK CSIE team.No6 2019</span>
+            <!-- End of Page Wrapper -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
+                        </div>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+
+            <!-- Bootstrap core JavaScript-->
+            <script src='{% static "main_page/vendor/jquery/jquery.min.js" %}'></script>
+            <script src='{% static "main_page/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+
+
+
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
+
 </body>
 
 </html>
