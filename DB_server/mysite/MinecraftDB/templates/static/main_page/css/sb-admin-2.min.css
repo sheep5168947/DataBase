@@ -631,7 +631,6 @@ pre code {
 .row {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
     margin-right: -.75rem;
     margin-left: -.75rem
 }
