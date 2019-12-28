@@ -624,6 +624,10 @@ pre code {
     margin-left: auto
 }
 
+.inner {
+    margin-left: 50%;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
