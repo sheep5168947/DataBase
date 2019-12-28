@@ -264,153 +264,34 @@
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th class="headerSort" tabindex="0" role="columnheader button" title="該生物名稱">名稱
+                                                    <th class="headerSort" tabindex="0" role="columnheader button"
+                                                        title="該生物名稱">名稱
                                                     </th>
-                                                    <th class="headerSort headerSortDown" tabindex="0" role="columnheader button" title="該搜索範圍">搜索範圍
+                                                    <th class="headerSort headerSortDown" tabindex="0"
+                                                        role="columnheader button" title="該搜索範圍">材質
+                                                    </th>
+                                                    <th class="headerSort headerSortDown" tabindex="0"
+                                                        role="columnheader button" title="該搜索範圍">抗暴程度
+                                                    </th>
+                                                    <th class="headerSort headerSortDown" tabindex="0"
+                                                        role="columnheader button" title="該搜索範圍">最大堆疊數
+                                                    </th>
+                                                    <th class="headerSort headerSortDown" tabindex="0"
+                                                        role="columnheader button" title="該搜索範圍">稀有度
                                                     </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {% for item in List %}
                                                 <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
+                                                    <td>{{item.id}}</td>
+                                                    <td>{{item.name}}</td>
+                                                    <td>{{item.Texture}}</td>
+                                                    <td>{{item.Anti_Riot}}</td>
+                                                    <td>{{item.Max_Quanity}}</td>
+                                                    <td>{{item.Rarity}}</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
+                                                {% endfor %}
                                             </tbody>
                                             <tfoot></tfoot>
                                         </table>
