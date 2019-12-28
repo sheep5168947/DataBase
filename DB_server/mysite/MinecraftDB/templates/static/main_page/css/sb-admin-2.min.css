@@ -229,7 +229,8 @@ svg {
 }
 
 table {
-    border-collapse: collapse
+    width: 100%;
+    /* border-collapse: collapse */
 }
 
 caption {
@@ -624,8 +625,10 @@ pre code {
     margin-left: auto
 }
 
-.row.inner {
-    margin-left: 40%!important;
+.inner {
+    width: 70%;
+    margin-left: 15%!important;
+    margin-right: 15%!important;
 }
 
 .row {
