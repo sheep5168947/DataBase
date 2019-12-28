@@ -172,46 +172,46 @@ def aggressive_mobs(request):
 
 
 def neutral_mobs(request):
-    return render(request, 'static/main_page/neutral_mobs.html')
+    return render(request, 'static/main_page/neutral_mobs.html', {'Username': request.session['username']})
 
 
 def Overworld(request):
-    return render(request, 'static/main_page/Overworld.html')
+    return render(request, 'static/main_page/Overworld.html', {'Username': request.session['username']})
 
 
 def Nether(request):
-    return render(request, 'static/main_page/Nether.html')
+    return render(request, 'static/main_page/Nether.html', {'Username': request.session['username']})
 
 
 def End(request):
-    return render(request, 'static/main_page/End.html')
+    return render(request, 'static/main_page/End.html', {'Username': request.session['username']})
 
 
 def tools(request):
-    return render(request, 'static/main_page/tools.html')
+    return render(request, 'static/main_page/tools.html', {'Username': request.session['username']})
 
 
 def foods(request):
-    return render(request, 'static/main_page/foods.html')
+    return render(request, 'static/main_page/foods.html', {'Username': request.session['username']})
 
 
 def building_materials(request):
-    return render(request, 'static/main_page/building_materials.html')
+    return render(request, 'static/main_page/building_materials.html', {'Username': request.session['username']})
 
 
 def ores(request):
-    return render(request, 'static/main_page/ores.html')
+    return render(request, 'static/main_page/ores.html', {'Username': request.session['username']})
 
 
 def biome(request):
-    return render(request, 'static/main_page/biome.html')
+    return render(request, 'static/main_page/biome.html', {'Username': request.session['username']})
 
 
 def structures(request):
-    return render(request, 'static/main_page/structures.html')
+    return render(request, 'static/main_page/structures.html', {'Username': request.session['username']})
 
 def Steve(request):
-    return render(request, 'static/main_page/Steve.html')
+    return render(request, 'static/main_page/Steve.html', {'Username': request.session['username']})
 
 
 def backtomain(request):
