@@ -624,6 +624,34 @@ pre code {
     }
 }
 
+.Overworld {
+    background-image: url("https://i.pinimg.com/originals/a9/b9/8c/a9b98c3574eaad53955a8bc73564792e.jpg");
+}
+
+.Overworld-inside {
+    background-color: rgb(186, 153, 99);
+}
+
+.End {
+    background-image: url("https://i.pinimg.com/originals/59/8d/2d/598d2ddee569cf578df88fc8d0870a17.png")
+}
+
+.End-inside {
+    background-color: rgb(188, 197, 150);
+    color: white!important;
+}
+
+.Nether {
+    background-image: url("https://i.imgur.com/IkjLQel.png");
+}
+
+.Nether-inside {
+    background-color: rgb(119, 69, 78);
+    color: white!important;
+}
+
+.Nether-inside h2 {}
+
 .container-fluid {
     width: 100%;
     padding-right: .75rem;
