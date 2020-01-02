@@ -618,9 +618,9 @@ pre code {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1450px) {
     .container {
-        max-width: 1140px
+        max-width: 1450px
     }
 }
 
@@ -11455,4 +11455,9 @@ body.sidebar-toggled footer.sticky-footer {
 
 #Steve img {
     height: auto;
+}
+.itembackground{
+    height: 800px;
+    background-image: url("https://i.imgur.com/TQKTbEt.png");
+    background-size: cover;
 }
