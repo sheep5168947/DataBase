@@ -6833,6 +6833,19 @@ button.bg-dark:hover {
     display: inline-flex!important
 }
 
+.d-inside {
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem
+}
+
+.d-text {
+    text-align: center;
+    color: aliceblue;
+}
+
 @media (min-width:576px) {
     .d-sm-none {
         display: none!important
@@ -11428,19 +11441,19 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
     width: 100%
 }
-#items img{
+
+#items img {
     width: 120px;
     height: auto;
     padding: 20px;
-    
     transition: 0.3s;
 }
-#items img:hover {
 
+#items img:hover {
     box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);
 }
-#Steve img{
-    
+
+#Steve img {
     height: auto;
 }
 .itembackground{
