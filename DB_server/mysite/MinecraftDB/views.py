@@ -303,9 +303,9 @@ def biomes(request):
         List.append(list_s)
     return render(request, 'static/main_page/biome.html',{'Username': request.session['username'],'List':List})
 
-def biome(request,index):
+def biome(request):
     cursor = connection.cursor()
-    cursor.execute("select id,Terrain_name from MinecraftDB_terrain where id='"+index+"'")
+    cursor.execute("select id,Terrain_name from MinecraftDB_terrain")
     search = cursor.fetchall()
     print(search)
     List = []
