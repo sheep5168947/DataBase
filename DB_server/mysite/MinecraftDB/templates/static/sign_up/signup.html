@@ -24,7 +24,7 @@
             font-size: 1.125rem;
             text-anchor: middle;
         }
-        
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -52,25 +52,33 @@
             <p class="lead">please Enter your account or login in guest</p>
             <div class="panel-body">
                 <div style=" border-radius: 20px;">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">🤮</span>
+                    <form action="/MinecraftDB/reply_signup/" method="POST">
+                        {% csrf_token %}
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">🤮</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1" name="SignName">
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="SignPassword">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">🤮</span>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">🤮</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Account" aria-label="Username"
+                                aria-describedby="basic-addon1" name="SignAccount">
                         </div>
-                        <input type="text" class="form-control" placeholder="Account" aria-label="Username" aria-describedby="basic-addon1" name="SignAccount">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">🤮</span>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">🤮</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Password" aria-label="Username"
+                                aria-describedby="basic-addon1" name="SignPassword">
                         </div>
-                        <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" name="SignPassword">
-                    </div>
-                    <input class="btn btn-primary" type="submit" value="Sign up">
+                        <input class="btn btn-primary" type="submit" value="Sign up">
+                        
+                    </form>
+                    <p style="color: aliceblue;font-size: 30px;">{{error_info}}</p>
                 </div>
             </div>
 

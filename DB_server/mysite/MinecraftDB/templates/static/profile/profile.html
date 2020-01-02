@@ -236,7 +236,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center" style="margin-bottom: 200px;">
+                    <div class="d-sm-flex align-items-center" style="margin-bottom: 100px;">
                         <h1 class="h3 mb-0 text-gray-800">Profile</h1>
 
                     </div>
@@ -253,11 +253,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form>
+                                    <form action="/MinecraftDB/updateProfile/" method="POST">
+                                        {% csrf_token %}
                                         <div class="form-group row">
                                             <label for="username" class="col-4 col-form-label">User Name</label>
                                             <div class="col-8">
-                                                <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
+                                                <a id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text" value={{Username}}>{{Username}}</a>
                                             </div>
                                         </div>
 
@@ -270,7 +271,7 @@
                                         <div class="form-group row">
                                             <label for="text" class="col-4 col-form-label">Account</label>
                                             <div class="col-8">
-                                                <p class="form-control here">{{Account}}</p>
+                                                <p class="form-control here" >{{Account}}</p>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -281,7 +282,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <div class="offset-4 col-8">
-                                                <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                                <button name="submit" value={{Account}} type="submit" class="btn btn-primary">Update My Profile</button>
                                             </div>
                                         </div>
                                     </form>
