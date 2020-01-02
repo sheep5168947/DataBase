@@ -10,14 +10,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title hre>Database Project No.6-地形</title>
+    <title hre>Database Project No.6-工具</title>
 
     <!-- Custom fonts for this template-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <title hre>Database Project No.6-地形</title>
-
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <title hre>Database Project No.6-工具</title>
+    <script src="../function.js"></script>
     <!-- Custom fonts for this template-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href='{% static "main_page/css/sb-admin-2.min.css" %}' rel="stylesheet">
@@ -38,13 +42,15 @@
             <!-- Sidebar - Brand -->
             <form action="/MinecraftDB/backtomain/" method="POST">
                 {% csrf_token %}
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/MinecraftDB/backtomain/">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                    href="/MinecraftDB/backtomain/">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-compass"></i>
                     </div>
                     <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
                 </a>
             </form>
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -70,7 +76,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-paw"></i>
                     <span>生物</span>
                 </a>
@@ -87,11 +94,13 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
                     <i class="fas fa-globe-asia"></i>
                     <span>世界</span>
                 </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">世界:</h6>
                         <a class="collapse-item" href="/MinecraftDB/Overworld">主世界</a>
@@ -103,7 +112,8 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-hamburger"></i>
                     <span>道具</span>
                 </a>
@@ -166,13 +176,13 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/MinecraftDB/Search/" method="POST">
-                        {% csrf_token %}
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2" name="search">
+                                aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
+                                <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -184,14 +194,18 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -202,16 +216,19 @@
                             </div>
                         </li>
 
-
                         <div class="topbar-divider d-none d-sm-block"></div>
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Username}}</span>
-                                <img class="img-profile rounded-circle" src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
+                                <img class="img-profile rounded-circle"
+                                    src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="/MinecraftDB/profile/">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 個人簡介
                                 </a>
@@ -222,7 +239,8 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 所有貼文
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MinecraftDB/login" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/MinecraftDB/login" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> 登出
                                 </a>
                             </div>
@@ -238,59 +256,72 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-main mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">地形</h1>
-                        <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <h1 class="h3 mb-0 text-gray-800">{{Search}}的搜尋結果:</h1>
+                        <a href="../main page/main.html"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-edit"></i> Edit</a>
                     </div>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <p>本頁列出了所有地形</p>
+                    <div style="font-size: 20px;">
+                        {{Search}}
+                        {% if type %}
+                        屬於:{{type}}
+                        {% endif %}
+
+                        {% if HP %}
+                        生命:{{HP}}
+                        {% endif %}
+
+                        {% if attack %}
+                        攻擊力:{{attack}}
+                        {% endif %}
+
+                        {% if Search_range %}
+                        搜尋範圍:{{Search_range}}
+                        {% endif %}
+
+                        {% if can_grow %}
+                        是否會長大:{{can_grow}}
+                        {% endif %}
+
+                        {% if can_trap %}
+                        可獵捕:{{can_trap}}
+                        {% endif %}
+
+                        {% if Durable %}
+                        耐久度:{{Durable}}
+                        {% endif %}
+
+                        {% if Satiety %}
+                        飽食度:{{Satiety}}
+                        {% endif %}
+
+                        {% if Texture %}
+                        材質:{{Texture}}
+                        {% endif %}
+
+                        {% if Anti_Riot %}
+                        抗暴程度:{{Anti_Riot}}
+                        {% endif %}
+
+                        {% if Generate_Range %}
+                        生成範圍:{{Generate_Range}}
+                        {% endif %}
+
+                        {% if Max_Quanity %}
+                        最大堆疊數:{{Max_Quanity}}
+                        {% endif %}
+
+                        {% if Rarity %}
+                        稀有度:{{Rarity}}
+                        {% endif %}
                     </div>
+                    {% if no_answer %}
+                    <div>沒有搜尋到任何結果</div>
+                    {% endif %}
+
                     <!-- Content Row -->
-                    <div class="row">
 
 
-                        <!-- Content Row -->
-
-                        <div class="row inner">
-
-                            <!-- Area Chart -->
-                            <div class="table">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">地形</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <table class="sortable wikitable jquery-tablesorter" data-description="名稱">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th class="headerSort" tabindex="0" role="columnheader button" title="該生物名稱">名稱
-                                                    </th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {% for item in List %}
-                                                <tr>
-                                                    <td>{{item.id}}</td>
-                                                    <td>{{item.name}}</td>
-                                                </tr>
-                                                {% endfor %}                                         
-                                            </tbody>
-                                            <tfoot></tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.container-fluid -->
 
                 </div>
                 <!-- End of Main Content -->
@@ -317,7 +348,8 @@
         </a>
 
         <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

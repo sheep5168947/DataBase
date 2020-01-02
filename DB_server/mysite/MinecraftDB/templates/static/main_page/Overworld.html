@@ -15,7 +15,6 @@
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <title hre>Database Project No.6-攻擊型生物</title>
-    <script src="../function.js"></script>
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -152,13 +151,13 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column Overworld">
 
             <!-- Main Content -->
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow Overworld-inside">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -166,11 +165,13 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/MinecraftDB/Search/" method="POST">
+                        {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2" name="search">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -232,204 +233,70 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid Overworld-inside">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-main mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">攻擊型生物</h1>
+                        <h1 class="h3 mb-0 text-gray-800">主世界</h1>
                         <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-edit"></i> Edit</a>
                     </div>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <p>本頁列出了所有攻擊型生物</p>
-                    </div>
-                    <!-- Content Row -->
-                    <div class="row">
-
-
-                        <!-- Content Row -->
-
-                        <div class="row inner">
-
-                            <!-- Area Chart -->
-                            <div class="table">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">攻擊型生物</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <table class="sortable wikitable jquery-tablesorter" data-description="名稱">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th class="headerSort" tabindex="0" role="columnheader button" title="該生物名稱">名稱
-                                                    </th>
-                                                    <th class="headerSort headerSortDown" tabindex="0" role="columnheader button" title="該搜索範圍">搜索範圍
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot></tfoot>
-                                        </table>
-                                    </div>
-                                </div>
+                    <!-- /.container-fluid -->
+                    <p>主世界（The Overworld）是Minecraft玩家的遊戲征途開始時所在的維度。</p>
+                </div>
+                <div>
+                    <div class="container-fluid Overworld-inside">
+                        <h2 class="h4 mb-0 text-gray-800 justify-content-main">生成</h2>
+                        <div class="thumb tright Overworld">
+                            <div class="thumbinner" style="width:202px;">
+                                <img alt="" src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/2/28/River_through_Mesa.png/200px-River_through_Mesa.png?version=abb1af84ab43b6838a87c6f8b04bec55" decoding="async" width="200" height="119" class="thumbimage" srcset="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/2/28/River_through_Mesa.png/300px-River_through_Mesa.png?version=abb1af84ab43b6838a87c6f8b04bec55 1.5x, https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/2/28/River_through_Mesa.png/400px-River_through_Mesa.png?version=abb1af84ab43b6838a87c6f8b04bec55 2x"></a>
+                                <div class="thumbcaption">
+                                    <div class="magnify">
+                                        <a href="/File:River_through_Mesa.png" class="internal" title="放大"></a>
+                                    </div>河流群系穿過<a href="/%E6%81%B6%E5%9C%B0" title="惡地">惡地</a>生態域。</div>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.container-fluid -->
+                        <p>創建一個新世界時，玩家將預設出生在主世界。其他維度，如地獄和終末之界都需要經過特定的傳送門才能夠進入。
+                        </p>
+                        <p>與所有其他維度一樣，主世界可以無限生成。然而生成會有所限制，詳情見下。 主世界擁有高度限制（Y=256），最低通往虛空（Y=0），但往四周可水平延伸29,999,999格。技術上而言，世界的生成是通過建立數個噪聲分布來決定地形地貌、區塊外觀，以及山脈、洞穴系統的狀態和分布。
+                        </p>
+                        <p>Minecraft中的世界的生成都使用種子，作為世界生成算法的起點。種子如果不是整數（譬如「Glacier」），則會被轉換成對應的整數（如1772835215）使用。 只要遊戲版本和世界類型相同，使用相同的種子會產生幾乎完全一致的世界。除了出生點有微小的差異外，所有地理特性的所處坐標會保持一致。
 
+                        </p>
+                    </div>
+                    <div class="container-fluid Overworld-inside">
+                        <h2 class="h4 mb-0 text-gray-800 justify-content-main">環境
+                        </h2>
+                        <div class="thumb tright Overworld">
+                            <div class="thumbinner" style="width:322px;;">
+                                <img alt="" src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/0/01/Day_Night.gif?version=5c25498987e7e086d61562c4f4e0fc52"></a>
+                                <div class="thumbcaption">
+                                    <div class="magnify">
+                                        <a href="/File:River_through_Mesa.png" class="internal" title="放大"></a>
+                                    </div>主世界晝夜變換。</div>
+                            </div>
+                        </div>
+                        <p>主世界是一個非常複雜的環境，擁有各種各樣的特性。</p>
+                        <p>主世界可以劃分為多個生態域，一個區域的生態域可以決定該區域幾乎所有的地理性質。生態域的大小各不相同，且幾乎所有生態域都有自己的變種。生態域也會影響生物的生成，以及環境表現（如天氣）。</p>
+                        <p>主世界中擁有各種特異的地形樣式，被稱為結構。結構的分布因種子和生態域而大不相同。特定的結構在特定的世界中是獨一無二的；結構一般可以與現實一一對應，譬如山脈、洞穴和湖泊。某些「不可思議」的結構，譬如浮空島嶼，也會出現在主世界中。 除了這些地形樣式以外，自然結構還包括自然生成的建築物，譬如村莊、地牢和廢棄礦坑。
+                        </p>
+                        <p>主世界是多種生物的家園。生物的生成受亮度等級、生態域和其他因素影響。生物的習性各不相同，且可能會對玩家造成大大小小的威脅。其他維度，譬如地獄中的生物，可能會通過傳送門進入主世界。然而，Boss生物如終界龍和凋零怪無法使用傳送門。</p>
+                    </div>
+                    <div class="container-fluid Overworld-inside">
+                        <h2 class="h4 mb-0 text-gray-800 justify-content-main">創建</h2>
+                        <p>與所有其他維度一樣，主世界可以無限生成。然而生成會有所限制，詳情見下。 主世界擁有高度限制（Y=256），最低通往虛空（Y=0），但往四周可水平延伸29,999,999格。技術上而言，世界的生成是通過建立數個噪聲分布來決定地形地貌、區塊外觀，以及山脈、洞穴系統的狀態和分布。
+                        </p>
+                        <p>區塊是世界生成器劃分世界的分塊，以便管理。區塊有16方格寬、16方格長、256方格高，總體積為65,536方塊。首次進入世界時，玩家周圍的區塊會立即生成；隨著玩家的移動，新的區塊會根據需要逐漸生成。通過調節視野距離，玩家可以決定載入內存的區塊數量，範圍為25-1089個區塊。 只有指定範圍內的區塊能夠發生活動（生物生成、樹木生長、水的流動、掉落物品的消失、生物移動等等），範圍以外的區塊不活動，且被保存在硬碟上。這種區塊管理機制使玩家的計算機免於同時追蹤成千上萬的方塊和實體。值得注意的是，這種機制不適用於出生點區塊，無論玩家走得有多遠，該區塊都能夠繼續發生活動。在無限世界首次引入時（Infdev-Beta
+                            1.7版本），在X軸或Z軸±32,000,000處的區塊是「假區塊」，超過了這個位置不會有方塊生成，儘管仍然有方塊顯示出來。如果玩家嘗試走上這些區塊，會掉進虛空。
+                        </p>
+                    </div>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
                 </div>
+
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                <footer class="sticky-footer bg-white">
+                <footer class="sticky-footer bg-white Overworld">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <span>Copyright &copy; NUK CSIE team.No6 2019</span>
@@ -438,44 +305,44 @@
                 </footer>
                 <!-- End of Footer -->
 
+                </divc>
+                <!-- End of Content Wrapper -->
+
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Page Wrapper -->
 
-        </div>
-        <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src='{% static "main_page/vendor/jquery/jquery.min.js" %}'></script>
-        <script src='{% static "main_page/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-
+            <!-- Bootstrap core JavaScript-->
+            <script src='{% static "main_page/vendor/jquery/jquery.min.js" %}'></script>
+            <script src='{% static "main_page/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
 
 
-        <!-- Custom scripts for all pages-->
-        <script src='{% static "main_page/js/sb-admin-2.min.js" %}'></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src='{% static "main_page/js/sb-admin-2.min.js" %}'></script>
 
 </body>
 

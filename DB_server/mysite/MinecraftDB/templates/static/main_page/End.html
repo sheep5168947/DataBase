@@ -10,12 +10,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title hre>Database Project No.6-終界</title>
+    <title hre>Database Project No.6-攻擊型生物</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <title hre>Database Project No.6-終界</title>
-    <script src="../function.js"></script>
+    <title hre>Database Project No.6-攻擊型生物</title>
+
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -45,7 +45,6 @@
                     <div class="sidebar-brand-text mx-3">NUK CSIE<sup>No.6</sup></div>
                 </a>
             </form>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -153,7 +152,7 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column End">
 
             <!-- Main Content -->
             <div id="content">
@@ -167,11 +166,13 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/MinecraftDB/Search/" method="POST">
+                        {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2" name="search">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -233,7 +234,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid End-inside">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-main mb-4">
@@ -241,192 +242,60 @@
                         <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-edit"></i> Edit</a>
                     </div>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <p>本頁列出了所有終界</p>
-                    </div>
-                    <!-- Content Row -->
-                    <div class="row">
-
-
-                        <!-- Content Row -->
-
-                        <div class="row inner">
-
-                            <!-- Area Chart -->
-                            <div class="table">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">終界</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <table class="sortable wikitable jquery-tablesorter" data-description="名稱">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th class="headerSort" tabindex="0" role="columnheader button" title="該生物名稱">名稱
-                                                    </th>
-                                                    <th class="headerSort headerSortDown" tabindex="0" role="columnheader button" title="該搜索範圍">搜索範圍
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>{{mob_id}}</td>
-                                                    <td>{{mob_name}}</td>
-                                                    <td>{{mob_search_range}}</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot></tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- /.container-fluid -->
+                    <p>終末之界（終界，The End）是類似於外空間的黑暗維度，它漂浮在虛空之中。</p>
+                </div>
+                <div class="container-fluid">
+                    <h2 class="h4 mb-0 text-gray-800 justify-content-main">前往</h2>
+                    <div class="thumb tright">
+                        <div class="thumbinner" style="width:302px;">
+                            <img alt="" src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/8/8e/Active_End_Portal.png/320px-Active_End_Portal.png"></a>
+                            <div class="thumbcaption">
+                                <div class="magnify">
+                                </div>一個終界傳送門房間。</div>
                         </div>
                     </div>
-                    <!-- /.container-fluid -->
+                    <p>要進入終末之界，玩家必須在要塞里找到並激活終界傳送門。<br> 終界傳送門房間有3×3的終界傳送門框架（邊角沒有終界傳送門框架），共計有12個終界傳送門框架。有一條階梯通往浮在熔岩池上方的傳送門。在階梯旁邊有一個蠹魚生怪磚。
+                        <br> 玩家需要把12個終界之眼分別插入到12個終界傳送門框架中。所有終界傳送門框架都被插入終界之眼後，終界傳送門便會激活並且會發出巨大的轟鳴聲。任何在終界傳送門框架中間3×3空間裡包括基岩和其他終界傳送門框架在內的方塊、實體都會被摧毀並被終界傳送門方塊代替。玩家在進入激活的終界傳送門時會被立刻傳送到終末之界。
+                    </p>
+                </div>
+                <div class="container-fluid End-inside">
+                    <h2 class="h4 mb-0 text-gray-800 justify-content-main">環境
+                    </h2>
+                    <div class="thumb tright">
+                        <div class="thumbinner" style="width:302px;">
+                            <img alt="" src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/ec/EndCityBanners.png/320px-EndCityBanners.png"></a>
+                            <div class="thumbcaption">
+                                <div class="magnify">
+                                </div>終界城。</div>
+                        </div>
+                    </div>
+                    <P>終末之界由一個大島嶼和遠處的許多小外島構成，它們主要由終界石組成。中央島嶼和外島之間的缺口是一個長約1000格的虛空。 終末之界的天空和虛空都是沒有圖案的靜止黑暗。終末之界沒有日夜交替，與地獄一樣；取而代之的是恆久不變的暗淡光芒。 大多數的物品和方塊在終末之界的功能與在主世界一樣，除了以下例外：
+
+                    </P>
+                    <ul>
+                        <li>像地獄那樣，在終末之界使用床時會爆炸</a>，其爆炸威力比TNT大25%。並且會生成火。</li>
+                        <li>像地獄那樣，熔岩在終末之界會流得更快些；但它在終末之界流動的距離與主世界一樣是3格。</li>
+                        <li>水在終末之界的特性與在主世界相同。</li>
+                        <li>指南針不能找到出生點，因為玩家不能在終末之界設定新的出生點。</li>
+                        <li>時鐘不能確定太陽和月亮的位置，因為在終末之界中沒有日夜交替，所以時鐘會隨機旋轉。</li>
+                        <li>地獄傳送門不能在終末之界激活。（儘管可以通過指令或外部軟體和編輯器放置）</li>
+                        <li>火會在基岩上面無盡地燃燒，但不會自然傳播到毗鄰的基岩方塊上。</li>
+                    </ul>
+                </div>
+                <div class="container-fluid End-inside">
+                    <h2 class="h4 mb-0 text-gray-800 justify-content-main">生態域</h2>
+                    <p>終界由終末之界，終界小島，終界平地，終界高地，終界荒地所組成</p>
+                    <ul>
+                        <li>終末之界生成在終末之界中以(0,0)為中心1000格為半徑的圓內。終末之界主島在圓心處生成。終末之界的大多數特性都在這個生態域里，例如終界龍、黑曜石柱、終界水晶、5×5生成平台、返回傳送門和20個終界折躍門。</li>
+                        <li>終界小島作為外島的一部分生成，由較大的島嶼和它周圍較小的圓形島嶼及其之間的空隙組成。 </li>
+                        <li>終界平地作為外島的一部分生成，每個島嶼的丘陵到邊角周圍的懸崖之間有較小的高度變化。終界城會在這裡生成，但不會生成歌萊樹。</li>
+                        <li>終界高地作為外島的一部分生成，每個島嶼由丘陵組成。該生態域是唯一一個歌萊樹和終界城都會生成的生態域。</li>
+                        <li>終界荒地作為外島的一部分生成，每個島嶼由延伸的邊角組成，邊角下方是陡峭的懸崖。該生態域不會生成歌萊樹和終界城。</li>
+                    </ul>
 
                 </div>
+                <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
@@ -439,44 +308,44 @@
                 </footer>
                 <!-- End of Footer -->
 
+                </divc>
+                <!-- End of Content Wrapper -->
+
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Page Wrapper -->
 
-        </div>
-        <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="/MinecraftDB/login/">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src='{% static "main_page/vendor/jquery/jquery.min.js" %}'></script>
-        <script src='{% static "main_page/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-
+            <!-- Bootstrap core JavaScript-->
+            <script src='{% static "main_page/vendor/jquery/jquery.min.js" %}'></script>
+            <script src='{% static "main_page/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
 
 
-        <!-- Custom scripts for all pages-->
-        <script src='{% static "main_page/js/sb-admin-2.min.js" %}'></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src='{% static "main_page/js/sb-admin-2.min.js" %}'></script>
 
 </body>
 

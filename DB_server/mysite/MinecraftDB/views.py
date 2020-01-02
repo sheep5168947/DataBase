@@ -14,13 +14,48 @@ def index(request):
     return render(request, 'MinecraftDB/index.html')
 
 
-def Search(request, search_name):
+def Search(request):
+    if request.method == "POST":
+        print("get")
+    search_key=request.POST["search"]
     cursor = connection.cursor()
-    cursor.execute('select Introduction_text from MinecraftDB_Terrain')
-    search_object = cursor.fetchone()[0]
-
+    #攻擊生物
+    cursor.execute("select MinecraftDB_attack_creature.id,Attack_Creature_name,Search_range,HealthPoints,Attack from MinecraftDB_attack_creature,MinecraftDB_creature where Attack_Creature_name=Creature_name AND Attack_Creature_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"攻擊性生物",'Search_range':search_object[2],'HP':search_object[3],'attack':search_object[4]})
+    #中立生物
+    cursor.execute("select MinecraftDB_neutral_creature.id,Neutral_Creature_name,HealthPoints,Attack,Can_grow,Can_Trap from MinecraftDB_neutral_creature,MinecraftDB_creature where Neutral_Creature_name=Creature_name AND Neutral_Creature_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"中立性生物",'can_trap':search_object[5],'can_grow':search_object[4],'HP':search_object[2],'attack':search_object[3]})
+    
+    #工具
+    cursor.execute("select MinecraftDB_tool.id,Tool_name,Durable,Rarity,Max_Quantity from MinecraftDB_tool,MinecraftDB_item where tool_name=Item_name AND Tool_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:       
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"工具",'Durable':search_object[2],'Rarity':search_object[3],'Max_Quanity':search_object[4]})
+    #食物
+    cursor.execute("select MinecraftDB_food.id,Food_name,Satiety,Rarity,Max_Quantity from MinecraftDB_food,MinecraftDB_item where Food_name=Item_name AND Food_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:       
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"食物",'Satiety':search_object[2],'Rarity':search_object[3],'Max_Quanity':search_object[4]})
+   
+    #建材
+    cursor.execute("select MinecraftDB_building_materials.id,Building_Materials_name,Texture,Anti_Riot,Rarity,Max_Quantity from MinecraftDB_building_materials, MinecraftDB_item where Building_Materials_name=Item_name AND Building_Materials_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:       
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"建材",'Texture':search_object[2],'Anti_Riot':search_object[3],'Rarity':search_object[4],'Max_Quanity':search_object[5]})
+    #礦物
+    cursor.execute("select MinecraftDB_mineral.id,Mineral_name,Generate_Range,Rarity,Max_Quantity from MinecraftDB_mineral,MinecraftDB_item where Mineral_name=Item_name AND Mineral_name='"+search_key+"'")
+    search_object = cursor.fetchone()
+    if search_object is not None:       
+        return render(request, 'static/main_page/Search.html',{'Search':search_key,'type':"礦物",'Generate_Range':search_object[2],'Rarity':search_object[3],'Max_Quanity':search_object[4]})
+    #世界
+    
     # search_object = Terrain.objects.get(Terrain, Terrain_name=search_name)
-    return render(request, 'MinecraftDB/index.html', {'search_object': search_object})
+
+    return render(request, 'static/main_page/Search.html',{'Search':search_key,"a":'A',"no_answer":"1"})
 
 
 def reply_login(request):
@@ -206,7 +241,15 @@ def End(request):
 
 
 def tools(request):
-    return render(request, 'static/main_page/tools.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute('select MinecraftDB_tool.id,Tool_name,Durable,Rarity,Max_Quantity from MinecraftDB_tool,MinecraftDB_item where tool_name=Item_name')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1], 'Durable': item[2],'Rarity':item[3],'Max_Quanity':item[4]}
+        List.append(list_s)
+    return render(request, 'static/main_page/tools.html',{'Username': request.session['username'],'List':List})
 
 
 def foods(request):
@@ -249,12 +292,39 @@ def ores(request):
     return render(request, 'static/main_page/ores.html',{'Username': request.session['username'],'List':List})
 
 
-def biome(request):
-    return render(request, 'static/main_page/biome.html', {'Username': request.session['username']})
+def biomes(request):
+    cursor = connection.cursor()
+    cursor.execute('select id,Terrain_name from MinecraftDB_terrain')
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1]}
+        List.append(list_s)
+    return render(request, 'static/main_page/biome.html',{'Username': request.session['username'],'List':List})
 
+def biome(request,index):
+    cursor = connection.cursor()
+    cursor.execute("select id,Terrain_name from MinecraftDB_terrain where id='"+index+"'")
+    search = cursor.fetchall()
+    print(search)
+    List = []
+    for item in search:
+        list_s = {'id': item[0], 'name': item[1]}
+        List.append(list_s)
+    return render(request, 'static/main_page/biome.html',{'Username': request.session['username'],'List':List})
 
 def structures(request):
-    return render(request, 'static/main_page/structures.html', {'Username': request.session['username']})
+    cursor = connection.cursor()
+    cursor.execute('select Structure_name,Structure_Explain,Terrain_Call from MinecraftDB_structure')
+    search = cursor.fetchall()
+    List = []
+    for item in search:
+        list_s = {'name': item[0],'where': item[2], 'Introduction': item[1]}
+        List.append(list_s)
+    return render(request, 'static/main_page/structures.html',{'Username': request.session['username'],'List':List})
+
+
 
 def Steve(request):
     return render(request, 'static/main_page/Steve.html', {'Username': request.session['username']})
