@@ -77,7 +77,7 @@ function sendDeleteForm()
 }
 
 function sendEditForm()
-{
+{   
     var token = $('input[name=csrfmiddlewaretoken]').val();
     var Contents=document.getElementById("EditContents").value
     var postID=document.querySelector(".goddamnhide").innerHTML
@@ -120,6 +120,7 @@ EditPost.addEventListener("click",sendEditForm)
 function ontest(obj){
     IDD=obj.querySelector(".goddamnhide").innerHTML
     console.log(IDD)
+    document.getElementById("EditContents").innerHTML=document.getElementById(IDD).innerHTML;
 }
 function delObj(obj){
     delID=obj.querySelector(".goddamnhide").innerHTML

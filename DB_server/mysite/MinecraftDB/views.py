@@ -108,6 +108,24 @@ def reply_post(request):
 def login(request):
     return render(request, 'static/login/login.html')
 
+def signup(request):
+    return render(request, 'static/sign_up/signup.html')
+
+def reply_signup(request):
+    print(request.POST['SignName'])
+    if request.POST['SignName']=="" or request.POST['SignAccount']=="" or request.POST['SignPassword']=="":
+        return render(request, 'static/sign_up/signup.html',{"error_info":"請輸入正確 名稱 帳號 和密碼"})
+    cursor = connection.cursor()
+    cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '" +
+                           request.POST['SignAccount']+"'")
+    ans = cursor.fetchone()
+    if ans is None:
+        cursor.execute("INSERT INTO MinecraftDB_member (Member_name, Account_number,Password) values (%s, %s,%s)", 
+        [request.POST['SignName'], request.POST['SignAccount'], request.POST['SignPassword']])
+        return redirect("/MinecraftDB/login/")  
+    else:
+         return render(request, 'static/sign_up/signup.html',{"error_info":"帳號已被註冊"})         
+
 
 def main(request, username):
     cursor = connection.cursor()
@@ -185,6 +203,11 @@ def profile(request):
     print(ans)
     return render(request, 'static/profile/profile.html', {'Password': ans[2], 'Account': ans[1], 'Info': ans[3], 'Username': request.session['username']})
 
+def updateProfile(request):
+    print(request.POST)
+    cursor = connection.cursor()
+    cursor.execute("UPDATE MinecraftDB_member SET Profile='"+request.POST["publicinfo"]+"' WHERE Account_number ='"+request.POST["submit"]+"'")    
+    return redirect("/MinecraftDB/profile/")
 
 def editPost(request):
     print(request.POST)
@@ -196,11 +219,6 @@ def editPost(request):
         "UPDATE MinecraftDB_member_diary SET Diary = '"+content+"' WHERE ID = "+ID)
     # print(request.session["username"])
     return render(request, 'static/login/login.html')
-
-
-def signup(request):
-    return render(request, 'static/sign_up/signup.html')
-
 
 def aggressive_mobs(request):
     cursor = connection.cursor()
