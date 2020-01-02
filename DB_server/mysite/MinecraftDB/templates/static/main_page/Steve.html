@@ -14,6 +14,7 @@
     <!-- Custom fonts for this template-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
     </script>
+    <script defer src='{% static "main_page/js/Steve.js" %}'></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <title hre>Database Project No.6-食物</title>
 
@@ -405,28 +406,28 @@
                                 <div id="weapon">
                                     <div class="row">
                                         <div style="display: flex;">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e6/Wooden_Sword_Revision_2.png/120px-Wooden_Sword_Revision_2.png?version=91e67f670f91666ccfd7adc2a0e8b1c6" class="weapon-4">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/8/82/Golden_Sword_Revision_3.png/120px-Golden_Sword_Revision_3.png?version=7b04e50e0bd112e3ef14708193b411cb" class="weapon-4">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/50/Stone_Sword_Revision_2.png/120px-Stone_Sword_Revision_2.png?version=c244b45c4d0a8f849cc8eb69231912fd" class="weapon-5">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/6/67/Iron_Sword_Revision_2.png/120px-Iron_Sword_Revision_2.png?version=527eeb764dc46520dd7ac1e9908a8f12" class="weapon-6">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/7/70/Diamond_Sword_Revision_2.png/120px-Diamond_Sword_Revision_2.png?version=5f0e61488e208d1290153ffd38746b2e" class="weapon-7">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/17/Bow_Revision_1.png/120px-Bow_Revision_1.png?version=aaa5c1e220c50603b2b6c8a9010a8d6b" class="weapon-9">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e6/Wooden_Sword_Revision_2.png/120px-Wooden_Sword_Revision_2.png?version=91e67f670f91666ccfd7adc2a0e8b1c6" id="weapon-1">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/8/82/Golden_Sword_Revision_3.png/120px-Golden_Sword_Revision_3.png?version=7b04e50e0bd112e3ef14708193b411cb" id="weapon-2">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/50/Stone_Sword_Revision_2.png/120px-Stone_Sword_Revision_2.png?version=c244b45c4d0a8f849cc8eb69231912fd" id="weapon-3">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/6/67/Iron_Sword_Revision_2.png/120px-Iron_Sword_Revision_2.png?version=527eeb764dc46520dd7ac1e9908a8f12" id="weapon-4">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/7/70/Diamond_Sword_Revision_2.png/120px-Diamond_Sword_Revision_2.png?version=5f0e61488e208d1290153ffd38746b2e" id="weapon-5">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/17/Bow_Revision_1.png/120px-Bow_Revision_1.png?version=aaa5c1e220c50603b2b6c8a9010a8d6b" id="weapon-6">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div style="display: flex;">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/39/20190424114625%21Wooden_Axe_Revision_2.png/120px-Wooden_Axe_Revision_2.png?version=fd6aedff948e9218b7ab54c4512b2a04" class="weapon-7">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/9/9b/20190424093853%21Golden_Axe_Revision_2.png/120px-Golden_Axe_Revision_2.png?version=320dc26bcb19e229b156eb746ae1f3b0" class="weapon-7">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/38/20190424104209%21Stone_Axe_Revision_2.png/120px-Stone_Axe_Revision_2.png?version=d125062a6ca35b09ce41f8121a1834f5" class="weapon-7">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/f/f6/Iron_Axe_Revision_4.png/120px-Iron_Axe_Revision_4.png?version=65fa3a3684cfcfcc4d7b2aad58780114" class="weapon-9">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/8/81/20190424091701%21Diamond_Axe_Revision_2.png/120px-Diamond_Axe_Revision_2.png?version=dc98241d0a3b0673a81cdc9eb1d03c7f" class="weapon-9">
-                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/9a/Trident.png/120px-Trident.png?version=57c087a5dab2379bef5ac5866d0ade1f" class="weapon-9">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/39/20190424114625%21Wooden_Axe_Revision_2.png/120px-Wooden_Axe_Revision_2.png?version=fd6aedff948e9218b7ab54c4512b2a04" id="weapon-7">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/9/9b/20190424093853%21Golden_Axe_Revision_2.png/120px-Golden_Axe_Revision_2.png?version=320dc26bcb19e229b156eb746ae1f3b0" id="weapon-8">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/38/20190424104209%21Stone_Axe_Revision_2.png/120px-Stone_Axe_Revision_2.png?version=d125062a6ca35b09ce41f8121a1834f5" id="weapon-9">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/f/f6/Iron_Axe_Revision_4.png/120px-Iron_Axe_Revision_4.png?version=65fa3a3684cfcfcc4d7b2aad58780114" id="weapon-10">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/8/81/20190424091701%21Diamond_Axe_Revision_2.png/120px-Diamond_Axe_Revision_2.png?version=dc98241d0a3b0673a81cdc9eb1d03c7f" id="weapon-11">
+                                            <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/9a/Trident.png/120px-Trident.png?version=57c087a5dab2379bef5ac5866d0ade1f" id="weapon-12">
                                         </div>
                                     </div>
                                 </div>
 
 
-                                <script>
+                                <!-- <script>
                                     var weapon = document.getElementById("weapon");
                                     var flag = 0;
                                     console.log(weapon);
@@ -463,9 +464,10 @@
 
                                         }
                                     })
-                                </script>
+                                </script> -->
                             </div>
                             <div class="col" style="padding-left: 18%; padding-top: 6%;">
+
                                 <div id="Steve" style="width: 304px;height: 684px;position: relative;  z-index:0;">
                                     <img src="https://i.imgur.com/bqpN2JS.png" alt="" style="width: 304px;height: 684px;position: relative;  z-index:0;">
 
