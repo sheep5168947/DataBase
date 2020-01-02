@@ -323,12 +323,12 @@ def biomes(request):
 
 def biome(request):
     cursor = connection.cursor()
-    cursor.execute("select id,Terrain_name from MinecraftDB_terrain")
+    cursor.execute("select id,Terrain_name,url from MinecraftDB_terrain")
     search = cursor.fetchall()
     print(search)
     List = []
     for item in search:
-        list_s = {'id': item[0], 'name': item[1]}
+        list_s = {'id': item[0], 'name': item[1],'url':item[2]}
         List.append(list_s)
     return render(request, 'static/main_page/biome.html',{'Username': request.session['username'],'List':List})
 
