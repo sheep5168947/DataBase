@@ -272,175 +272,63 @@
                                 <div class="row">
                                     <div style="display: flex;" id="head">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/b/b5/20191208041322%21Leather_Cap.png/120px-Leather_Cap.png?version=954762ad36b57ad9e119b66d057cc714"
-                                            alt="">
+                                            alt="" id="1">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/9/96/20191208034751%21Chainmail_Helmet.png/120px-Chainmail_Helmet.png?version=bb9a45798c4731de9c6c064b75265b93"
-                                            alt="">
+                                            alt="" id="2">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/f/f7/20191208040825%21Iron_Helmet.png/120px-Iron_Helmet.png?version=4512c38333d2f45e8003e893478cb36c"
-                                            alt="">
+                                            alt="" id="3">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/1d/Diamond_Helmet.png/120px-Diamond_Helmet.png?version=6289d8af88b4045829587b96f221bea2"
-                                            alt="">
+                                            alt="" id="4">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/c/c6/20191208040300%21Golden_Helmet.png/120px-Golden_Helmet.png?version=e14756f441b779a87ea1150cec7e9fe4"
-                                            alt="">
+                                            alt="" id="5">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/5e/Turtle_Shell.png/120px-Turtle_Shell.png?version=388806e0a51e9936e8393ecaf0410862"
-                                            alt="">
+                                            alt="" id="6">
                                     </div>
-                                    <script>
-                                        var head = document.getElementById("head");
-                                        var head_flag = 0;
-                                        head.addEventListener("click", function () {
-                                            if (head_flag == 0) {
-                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                head_flag = 1;
-                                                return;
-                                            } else if (head_flag == 1) {
-                                                var str1 = "";
-                                                str1 = event.target.style.boxShadow;
-                                                console.log(str1);
-                                                if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
-                                                    event.target.style.boxShadow = "0 0 0 0";
-                                                    head_flag = 0;
-                                                    return;
-                                                } else {
-                                                    var child = head.children;
-                                                    for (var i = 0; i < child.length; i++) {
-                                                        child[i].style.boxShadow = '';
-                                                    }
-                                                    event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                    head_flag = 1;
-                                                    return;
-                                                }
-                                            }
-                                        })
-                                    </script>
+
                                 </div>
                                 <div class="row">
                                     <div style="display: flex;" id="breast">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/96/Leather_Tunic.png/120px-Leather_Tunic.png?version=02e651dfc94348160052ee1cad3e50ba"
-                                            alt="">
+                                            alt="" id="7">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/b/b5/20191208034601%21Chainmail_Chestplate.png/120px-Chainmail_Chestplate.png?version=9c62de47632f1477bb0aedde7becd452"
-                                            alt="">
+                                            alt="" id="8">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/4/43/Iron_Chestplate.png/120px-Iron_Chestplate.png?version=3afeccb4baa492cc1cfb4c61d11ba8cf"
-                                            alt="">
+                                            alt="" id="9">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/92/Diamond_Chestplate.png/120px-Diamond_Chestplate.png?version=1b81e15f7dcb4fabe88c9fa67d72d0a3"
-                                            alt="">
+                                            alt="" id="10">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/7/76/Golden_Chestplate.png/120px-Golden_Chestplate.png?version=54f7c83830e13ab720180dccee3de276"
-                                            alt="">
-                                        <script>
-                                            var breast = document.getElementById("breast");
-                                            var breast_flag = 0;
-                                            breast.addEventListener("click", function () {
-                                                if (breast_flag == 0) {
-                                                    event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                    breast_flag = 1;
-                                                    return;
-                                                } else if (breast_flag == 1) {
-                                                    var str1 = "";
-                                                    str1 = event.target.style.boxShadow;
-                                                    console.log(str1);
-                                                    if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
-                                                        event.target.style.boxShadow = "0 0 0 0";
-                                                        breast_flag = 0;
-                                                        return;
-                                                    } else {
-                                                        var child = breast.children;
-                                                        for (var i = 0; i < child.length; i++) {
-                                                            child[i].style.boxShadow = '';
-                                                        }
-                                                        event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                        breast_flag = 1;
-                                                        return;
-                                                    }
+                                            alt="" id="11">
 
-                                                }
-
-                                            })
-                                        </script>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div style="display: flex;" id="leg">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/2/28/Leather_Pants.png/120px-Leather_Pants.png?version=19435a3f6935d097af13022fff14c763"
-                                            alt="">
+                                            alt="" id="12">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e4/Chainmail_Leggings.png/120px-Chainmail_Leggings.png?version=c0c43c2d24ff4d149d26ed6dc6afa3f5"
-                                            alt="">
+                                            alt="" id="13">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/54/Iron_Leggings.png/120px-Iron_Leggings.png?version=3e7e3744c88ee846c36ec725912ea60e"
-                                            alt="">
+                                            alt="" id="14">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/12/Diamond_Leggings.png/120px-Diamond_Leggings.png?version=9ae091384acf39b6cdaa439d650fea7a"
-                                            alt="">
+                                            alt="" id="15">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/0/0a/Golden_Leggings.png/120px-Golden_Leggings.png?version=1a91cf20f35a0317ec25f9b8ddc4af64"
-                                            alt="">
-                                        <script>
-                                            var leg = document.getElementById("leg");
-                                            var leg_flag = 0;
-                                            leg.addEventListener("click", function () {
-                                                if (leg_flag == 0) {
-                                                    event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                    leg_flag = 1;
-                                                    return;
-                                                } else if (leg_flag == 1) {
-                                                    var str1 = "";
-                                                    str1 = event.target.style.boxShadow;
-                                                    console.log(str1);
-                                                    if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
-                                                        event.target.style.boxShadow = '';
-                                                        leg_flag = 0;
-                                                        return;
-                                                    } else {
-                                                        var child = leg.children;
-                                                        for (var i = 0; i < child.length; i++) {
-                                                            child[i].style.boxShadow = '';
-                                                        }
-                                                        event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                        leg_flag = 1;
-                                                        return;
-                                                    }
+                                            alt="" id="16">
 
-                                                }
-                                            })
-                                        </script>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div style="display: flex;" id="feet">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/f/fd/Leather_Boots.png/120px-Leather_Boots.png?version=f957b0915460d7bc9d36d83f558d9990"
-                                            alt="">
+                                            alt="" id="17">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/9e/Chainmail_Boots.png/120px-Chainmail_Boots.png?version=fd830666850f5c37549b996bb36cd5ba"
-                                            alt="">
+                                            alt="" id="18">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/c/c0/Iron_Boots.png/120px-Iron_Boots.png?version=1667963db99bff2857c6cbfb88076978"
-                                            alt="">
+                                            alt="" id="19">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/0/0b/Diamond_Boots.png/120px-Diamond_Boots.png?version=4d2c51a722f973b7128a9e9b4b9ad1da"
-                                            alt="">
+                                            alt="" id="20">
                                         <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/6/61/Golden_Boots.png/120px-Golden_Boots.png?version=ef2971b9a83edf79251cc9961e3a792a"
-                                            alt="">
-                                        <script>
-                                            var feet = document.getElementById("feet");
-                                            var feet_flag = 0;
-                                            feet.addEventListener("click", function () {
-                                                if (feet_flag == 0) {
-                                                    event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                    feet_flag = 1;
-                                                    return;
-                                                } else if (feet_flag == 1) {
-                                                    var str1 = "";
-                                                    str1 = event.target.style.boxShadow;
-                                                    console.log(str1);
-                                                    if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
-                                                        event.target.style.boxShadow = '';
-                                                        feet_flag = 0;
-                                                        return;
-                                                    } else {
-                                                        var child = feet.children;
-                                                        for (var i = 0; i < child.length; i++) {
-                                                            child[i].style.boxShadow = '';
-                                                        }
-                                                        event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                        feet_flag = 1;
-                                                        return;
-                                                    }
+                                            alt="" id="21">
 
-                                                }
-                                            })
-                                        </script>
                                     </div>
                                 </div>
                                 <div id="weapon">
@@ -479,44 +367,7 @@
                                 </div>
 
 
-                                <script>
-                                    var weapon = document.getElementById("weapon");
-                                    var flag = 0;
-                                    console.log(weapon);
-                                    weapon.addEventListener("click", function () {
-                                        if (flag == 0) {
-                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                            flag = 1;
-                                            return;
-                                        } else if (flag == 1) {
-                                            var str1 = "";
-                                            str1 = event.target.style.boxShadow;
-                                            console.log(str1);
-                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
-                                                event.target.style.boxShadow = '';
-                                                flag = 0;
-                                                return;
-                                            }
-                                            //
-                                            else {
-                                                var child = weapon.children;
-                                                for (var i = 0; i < child.length; i++) {
-                                                    var child2 = child[i].children;
-                                                    for (var j = 0; j < child2.length; j++) {
-                                                        var child3 = child2[j].children;
-                                                        for (var k = 0; k < child3.length; k++) {
-                                                            child3[k].style.boxShadow = '';
-                                                        }
-                                                    }
-                                                }
-                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
-                                                flag = 1;
-                                                return;
-                                            }
 
-                                        }
-                                    })
-                                </script>
                             </div>
                             <div class="col" style="padding-left: 18%; padding-top: 6%;">
                                 <div id="Steve" style="width: 304px;height: 684px;position: relative;  z-index:0;">
@@ -525,55 +376,81 @@
 
                                     <!-- 頭盔 -->
                                     <img src="https://i.imgur.com/SNWRQap.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -711px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -711px; visibility: hidden;">
                                     <img src="https://i.imgur.com/QlpdOue.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -759px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -759px; visibility: hidden;">
                                     <img src="https://i.imgur.com/ZzzRbIs.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -804px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -806px; visibility: hidden;">
                                     <img src="https://i.imgur.com/otVLXTb.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -852px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -853px; visibility: hidden;">
                                     <img src="https://i.imgur.com/hlEojTu.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -898px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -900px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/yaHh722.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -948px; visibility: hidden;">
+
 
                                     <!-- 胸甲 -->
-                                    <img src="https://i.imgur.com/SLX8s6D.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -988px;">
-                                    <!-- 鑽石 -->
-                                    <img src="https://i.imgur.com/W4nSned.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1073px;">
-                                    <!-- 鐵 -->
-                                    <img src="https://i.imgur.com/Jl79f7H.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1122px;">
-                                    <!-- 金 -->
                                     <img src="https://i.imgur.com/KueiMhv.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1170px;">
-                                    <!-- 皮革 -->
+                                        style="width: 304px;height: 684px;position: relative;  z-index:2; margin-top: -1071px; visibility: hidden;">
                                     <img src="https://i.imgur.com/cZlS5QI.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1217px;">
-                                    <!-- 鎖甲 -->
+                                        style="width: 304px;height: 684px;position: relative;  z-index:2; margin-top: -1119px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/W4nSned.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:2; margin-top: -1167px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/SLX8s6D.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:2; margin-top: -1176px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/Jl79f7H.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:2; margin-top: -1260px; visibility: hidden;">
 
                                     <!-- 護腿 -->
                                     <img src="https://i.imgur.com/NOBbs91.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1190px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1231px; visibility: hidden;">
                                     <img src="https://i.imgur.com/9x28Ty7.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1238px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1278px; visibility: hidden;">
                                     <img src="https://i.imgur.com/zZ8MMWZ.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1286px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1326px; visibility: hidden;">
                                     <img src="https://i.imgur.com/dtONKwb.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1334px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1378px; visibility: hidden;">
                                     <img src="https://i.imgur.com/AmquBSL.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1382px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1425px; visibility: hidden;">
+
                                     <!-- 腳 -->
                                     <img src="https://i.imgur.com/uNYI0G3.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1382px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
                                     <img src="https://i.imgur.com/yog21Dx.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1477px; visibility: hidden;">
                                     <img src="https://i.imgur.com/DdjiDKt.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1477px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1525px; visibility: hidden;">
                                     <img src="https://i.imgur.com/mvHsXFH.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1525px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1573px; visibility: hidden;">
                                     <img src="https://i.imgur.com/ap7d5ft.png" alt=""
-                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1573px;">
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1621px; visibility: hidden;">
+
+                                    <!-- 武器 -->
+                                    <img src="https://i.imgur.com/MUaLH0m.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/z9YUAGE.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/mfQ9l19.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/Lsik4mT.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/SqVNzb8.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+
+                                    <img src="https://i.imgur.com/4bifsCM.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/C62idku.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;"
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/Ze3PgNR.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="https://i.imgur.com/wR9JcHV.png" alt=""
+                                        style="width: 304px;height: 684px;position: relative;  z-index:1; margin-top: -1429px; visibility: hidden;">
+                                    <img src="" alt="">
                                 </div>
                             </div>
                         </div>
@@ -581,7 +458,188 @@
 
 
                 </div>
-            
+
+                <!-- JS -->
+                <script>
+                    var head = document.getElementById("head");
+                    var head_flag = 0;
+                    var showheadimg = document.getElementById("Steve").children;
+                    head.addEventListener("click", function () {
+                        var showhead = parseInt(event.target.id);
+                        if (head_flag == 0) {
+                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+
+                            showheadimg[showhead].style.visibility = "visible";
+                            head_flag = 1;
+                            return;
+                        } else if (head_flag == 1) {
+                            var str1 = "";
+                            str1 = event.target.style.boxShadow;
+                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                event.target.style.boxShadow = "0 0 0 0";
+                                showheadimg[showhead].style.visibility = "hidden";
+                                head_flag = 0;
+                                return;
+                            } else {
+                                var child = head.children;
+                                for (var i = 0; i < child.length; i++) {
+                                    child[i].style.boxShadow = '';
+                                }
+                                for (var i = 1; i < 7; i++) {
+                                    showheadimg[i].style.visibility = "hidden";
+                                }
+                                showheadimg[showhead].style.visibility = "visible";
+                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                head_flag = 1;
+                                return;
+                            }
+                        }
+                    })
+
+                    var breast = document.getElementById("breast");
+                    var breast_flag = 0;
+
+                    breast.addEventListener("click", function () {
+                        var showhead = parseInt(event.target.id);
+                        if (breast_flag == 0) {
+                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                            showheadimg[showhead].style.visibility = "visible";
+                            breast_flag = 1;
+                            return;
+                        } else if (breast_flag == 1) {
+                            var str1 = "";
+                            str1 = event.target.style.boxShadow;
+                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                event.target.style.boxShadow = "0 0 0 0";
+                                showheadimg[showhead].style.visibility = "hidden";
+                                breast_flag = 0;
+                                return;
+                            } else {
+                                var child = breast.children;
+                                for (var i = 0; i < child.length; i++) {
+                                    child[i].style.boxShadow = '';
+                                }
+                                for (var i = 7; i < 12; i++) {
+                                    showheadimg[i].style.visibility = "hidden";
+                                }
+                                showheadimg[showhead].style.visibility = "visible";
+                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                breast_flag = 1;
+                                return;
+                            }
+
+                        }
+
+                    })
+
+
+                    var leg = document.getElementById("leg");
+                    var leg_flag = 0;
+                    leg.addEventListener("click", function () {
+                        var showhead = parseInt(event.target.id);
+                        if (leg_flag == 0) {
+                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                            showheadimg[showhead].style.visibility = "visible";
+                            leg_flag = 1;
+                            return;
+                        } else if (leg_flag == 1) {
+                            var str1 = "";
+                            str1 = event.target.style.boxShadow;
+                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                event.target.style.boxShadow = '0 0 0 0';
+                                showheadimg[showhead].style.visibility = "hidden";
+
+                                leg_flag = 0;
+                                return;
+                            } else {
+                                var child = leg.children;
+                                for (var i = 0; i < child.length; i++) {
+                                    child[i].style.boxShadow = '';
+                                }
+                                for (var i = 12; i < 17; i++) {
+                                    showheadimg[i].style.visibility = "hidden";
+                                }
+                                showheadimg[showhead].style.visibility = "visible";
+                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                leg_flag = 1;
+                                return;
+                            }
+
+                        }
+                    })
+
+                    var feet = document.getElementById("feet");
+                    var feet_flag = 0;
+                    feet.addEventListener("click", function () {
+                        var showhead = parseInt(event.target.id);
+                        if (feet_flag == 0) {
+                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                            showheadimg[showhead].style.visibility = "visible";
+                            feet_flag = 1;
+                            return;
+                        } else if (feet_flag == 1) {
+                            var str1 = "";
+                            str1 = event.target.style.boxShadow;
+                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                event.target.style.boxShadow = '0 0 0 0';
+                                showheadimg[showhead].style.visibility = "hidden";
+                                feet_flag = 0;
+                                return;
+                            } else {
+                                var child = feet.children;
+                                for (var i = 0; i < child.length; i++) {
+                                    child[i].style.boxShadow = '';
+                                }
+                                for (var i = 17; i < 22; i++) {
+                                    showheadimg[i].style.visibility = "hidden";
+                                }
+                                showheadimg[showhead].style.visibility = "visible";
+                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                feet_flag = 1;
+                                return;
+                            }
+
+                        }
+                    })
+
+                    var weapon = document.getElementById("weapon");
+                    var flag = 0;
+                    weapon.addEventListener("click", function () {
+                        if (flag == 0) {
+                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                            flag = 1;
+                            return;
+                        } else if (flag == 1) {
+                            var str1 = "";
+                            str1 = event.target.style.boxShadow;
+                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                event.target.style.boxShadow = '';
+                                flag = 0;
+                                return;
+                            }
+
+                            else {
+                                var child = weapon.children;
+                                for (var i = 0; i < child.length; i++) {
+                                    var child2 = child[i].children;
+                                    for (var j = 0; j < child2.length; j++) {
+                                        var child3 = child2[j].children;
+                                        for (var k = 0; k < child3.length; k++) {
+                                            child3[k].style.boxShadow = '';
+                                        }
+                                    }
+                                }
+                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                flag = 1;
+                                return;
+                            }
+
+                        }
+                    })
+                </script>
+                <!-- END OF JS -->
+
+
 
                 <!-- End of Main Content -->
 
