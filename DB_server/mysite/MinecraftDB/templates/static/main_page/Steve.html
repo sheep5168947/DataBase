@@ -11,17 +11,14 @@
     <meta name="author" content="">
 
     <title hre>Database Project No.6-食物</title>
+    <!-- Custom fonts for this template-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <title hre>Database Project No.6-食物</title>
 
     <!-- Custom fonts for this template-->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <title hre>Database Project No.6-食物</title>
-    <script src="../function.js"></script>
-    <!-- Custom fonts for this template-->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href='{% static "main_page/css/sb-admin-2.min.css" %}' rel="stylesheet">
@@ -42,8 +39,7 @@
             <!-- Sidebar - Brand -->
             <form action="/MinecraftDB/backtomain/" method="POST">
                 {% csrf_token %}
-                <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                    href="/MinecraftDB/backtomain/">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/MinecraftDB/backtomain/">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-compass"></i>
                     </div>
@@ -76,8 +72,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-paw"></i>
                     <span>生物</span>
                 </a>
@@ -94,13 +89,11 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
-                    aria-expanded="true" aria-controls="collapseThree">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                     <i class="fas fa-globe-asia"></i>
                     <span>世界</span>
                 </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">世界:</h6>
                         <a class="collapse-item" href="/MinecraftDB/Overworld">主世界</a>
@@ -112,8 +105,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-hamburger"></i>
                     <span>道具</span>
                 </a>
@@ -176,11 +168,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -194,18 +184,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -220,15 +206,12 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Username}}</span>
-                                <img class="img-profile rounded-circle"
-                                    src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
+                                <img class="img-profile rounded-circle" src="https://fakeimg.pl/128x128/?retina=1&text=%E5%B8%A5%E5%93%A5&font=noto">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="/MinecraftDB/profile/">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 個人簡介
                                 </a>
@@ -239,8 +222,7 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 所有貼文
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MinecraftDB/login" data-toggle="modal"
-                                    data-target="#logoutModal">
+                                <a class="dropdown-item" href="/MinecraftDB/login" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> 登出
                                 </a>
                             </div>
@@ -257,8 +239,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-main mb-4">
                         <h1 class="h3 mb-0 text-gray-800">史蒂夫戰鬥力計算機</h1>
-                        <a href="../main page/main.html"
-                            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="../main page/main.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-edit"></i> Edit</a>
                     </div>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -266,15 +247,237 @@
                     </div>
                     <!-- Content Row -->
                     <div style="display: flex;">
-                        <div style="background-color: antiquewhite; width: 50px;height: 50px;">
+                        <div id="items">
+                            <div style="display: flex;" id="head">
+
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/b/b5/20191208041322%21Leather_Cap.png/120px-Leather_Cap.png?version=954762ad36b57ad9e119b66d057cc714" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/9/96/20191208034751%21Chainmail_Helmet.png/120px-Chainmail_Helmet.png?version=bb9a45798c4731de9c6c064b75265b93" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/f/f7/20191208040825%21Iron_Helmet.png/120px-Iron_Helmet.png?version=4512c38333d2f45e8003e893478cb36c" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/1d/Diamond_Helmet.png/120px-Diamond_Helmet.png?version=6289d8af88b4045829587b96f221bea2" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/c/c6/20191208040300%21Golden_Helmet.png/120px-Golden_Helmet.png?version=e14756f441b779a87ea1150cec7e9fe4" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/5e/Turtle_Shell.png/120px-Turtle_Shell.png?version=388806e0a51e9936e8393ecaf0410862" alt="">
+                                <script>
+                                    var head = document.getElementById("head");
+                                    var head_flag = 0;
+                                    head.addEventListener("click", function() {
+                                        if (head_flag == 0) {
+                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                            head_flag = 1;
+                                            return;
+                                        } else if (head_flag == 1) {
+                                            var str1 = "";
+                                            str1 = event.target.style.boxShadow;
+                                            console.log(str1);
+                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                                event.target.style.boxShadow = "0 0 0 0";
+                                                head_flag = 0;
+                                                return;
+                                            } else {
+                                                var child = head.children;
+                                                for (var i = 0; i < child.length; i++) {
+                                                    child[i].style.boxShadow = '';
+                                                }
+                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                                head_flag = 1;
+                                                return;
+                                            }
+                                        }
+                                    })
+                                </script>
+                            </div>
+                            <div style="display: flex;" id="breast">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/96/Leather_Tunic.png/120px-Leather_Tunic.png?version=02e651dfc94348160052ee1cad3e50ba" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/b/b5/20191208034601%21Chainmail_Chestplate.png/120px-Chainmail_Chestplate.png?version=9c62de47632f1477bb0aedde7becd452" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/4/43/Iron_Chestplate.png/120px-Iron_Chestplate.png?version=3afeccb4baa492cc1cfb4c61d11ba8cf" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/92/Diamond_Chestplate.png/120px-Diamond_Chestplate.png?version=1b81e15f7dcb4fabe88c9fa67d72d0a3" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/7/76/Golden_Chestplate.png/120px-Golden_Chestplate.png?version=54f7c83830e13ab720180dccee3de276" alt="">
+                                <script>
+                                    var breast = document.getElementById("breast");
+                                    var breast_flag = 0;
+                                    breast.addEventListener("click", function() {
+                                        if (breast_flag == 0) {
+                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                            breast_flag = 1;
+                                            return;
+                                        } else if (breast_flag == 1) {
+                                            var str1 = "";
+                                            str1 = event.target.style.boxShadow;
+                                            console.log(str1);
+                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                                event.target.style.boxShadow = "0 0 0 0";
+                                                breast_flag = 0;
+                                                return;
+                                            } else {
+                                                var child = breast.children;
+                                                for (var i = 0; i < child.length; i++) {
+                                                    child[i].style.boxShadow = '';
+                                                }
+                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                                breast_flag = 1;
+                                                return;
+                                            }
+
+                                        }
+
+                                    })
+                                </script>
+                            </div>
+                            <div style="display: flex;" id="leg">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/2/28/Leather_Pants.png/120px-Leather_Pants.png?version=19435a3f6935d097af13022fff14c763" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e4/Chainmail_Leggings.png/120px-Chainmail_Leggings.png?version=c0c43c2d24ff4d149d26ed6dc6afa3f5" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/54/Iron_Leggings.png/120px-Iron_Leggings.png?version=3e7e3744c88ee846c36ec725912ea60e" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/12/Diamond_Leggings.png/120px-Diamond_Leggings.png?version=9ae091384acf39b6cdaa439d650fea7a" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/0/0a/Golden_Leggings.png/120px-Golden_Leggings.png?version=1a91cf20f35a0317ec25f9b8ddc4af64" alt="">
+                                <script>
+                                    var leg = document.getElementById("leg");
+                                    var leg_flag = 0;
+                                    leg.addEventListener("click", function() {
+                                        if (leg_flag == 0) {
+                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                            leg_flag = 1;
+                                            return;
+                                        } else if (leg_flag == 1) {
+                                            var str1 = "";
+                                            str1 = event.target.style.boxShadow;
+                                            console.log(str1);
+                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                                event.target.style.boxShadow = '';
+                                                leg_flag = 0;
+                                                return;
+                                            } else {
+                                                var child = leg.children;
+                                                for (var i = 0; i < child.length; i++) {
+                                                    child[i].style.boxShadow = '';
+                                                }
+                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                                leg_flag = 1;
+                                                return;
+                                            }
+
+                                        }
+                                    })
+                                </script>
+                            </div>
+                            <div style="display: flex;" id="feet">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/f/fd/Leather_Boots.png/120px-Leather_Boots.png?version=f957b0915460d7bc9d36d83f558d9990" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/9e/Chainmail_Boots.png/120px-Chainmail_Boots.png?version=fd830666850f5c37549b996bb36cd5ba" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/c/c0/Iron_Boots.png/120px-Iron_Boots.png?version=1667963db99bff2857c6cbfb88076978" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/0/0b/Diamond_Boots.png/120px-Diamond_Boots.png?version=4d2c51a722f973b7128a9e9b4b9ad1da" alt="">
+                                <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/6/61/Golden_Boots.png/120px-Golden_Boots.png?version=ef2971b9a83edf79251cc9961e3a792a" alt="">
+                                <script>
+                                    var feet = document.getElementById("feet");
+                                    var feet_flag = 0;
+                                    feet.addEventListener("click", function() {
+                                        if (feet_flag == 0) {
+                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                            feet_flag = 1;
+                                            return;
+                                        } else if (feet_flag == 1) {
+                                            var str1 = "";
+                                            str1 = event.target.style.boxShadow;
+                                            console.log(str1);
+                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                                event.target.style.boxShadow = '';
+                                                feet_flag = 0;
+                                                return;
+                                            } else {
+                                                var child = feet.children;
+                                                for (var i = 0; i < child.length; i++) {
+                                                    child[i].style.boxShadow = '';
+                                                }
+                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                                feet_flag = 1;
+                                                return;
+                                            }
+
+                                        }
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                        <div id="Steve">
+                            <img src="https://i.imgur.com/bqpN2JS.png" alt="">
 
 
                         </div>
-                        <div>
-                            <img src="https://www.fotolip.com/wp-content/uploads/2016/05/Minecraft-Steve-4.jpg" alt="">
+                        <div id="showbreast">
+                            <img src="https://i.imgur.com/SLX8s6D.png" alt="" style=" position: absolute; top:197px; right: 627px;">
+                            <img src="https://i.imgur.com/W4nSned.png" alt="" style=" position: absolute; top:178px; right: 627px;">
+                            <img src="https://i.imgur.com/Jl79f7H.png" alt="" style=" position: absolute; top:178px; right: 627px;">
+                            <img src="https://i.imgur.com/KueiMhv.png" alt="" style=" position: absolute; top:178px; right: 627px;">
+                            <img src="https://i.imgur.com/cZlS5QI.png" alt="" style=" position: absolute; top:178px; right: 627px;">
+                        </div>
+                        <div id="showhead">
+                            <img src="https://i.imgur.com/4ZPqgJv.png" alt="" style="position: absolute;right: 627px;">
+                            <img src="https://i.imgur.com/8GH4UlV.png" alt="" style="position: absolute;right: 627px;">
+                            <img src="https://i.imgur.com/BilmB1n.png" alt="" style="position: absolute;right: 627px;">
+                            <img src="https://i.imgur.com/BtqTOtI.png" alt="" style="position: absolute;right: 627px;">
+                            <img src="https://i.imgur.com/iYufZ43.png" alt="" style="position: absolute;right: 627px;">
 
                         </div>
-                        <div style="background-color: azure; width: 50px;height: 50px;">
+                        <div id="items">
+                            <div id="weapon">
+
+                                <div style="display: flex;">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e6/Wooden_Sword_Revision_2.png/120px-Wooden_Sword_Revision_2.png?version=91e67f670f91666ccfd7adc2a0e8b1c6https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/e/e6/Wooden_Sword_Revision_2.png/120px-Wooden_Sword_Revision_2.png?version=91e67f670f91666ccfd7adc2a0e8b1c6"
+                                        alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/8/82/Golden_Sword_Revision_3.png/120px-Golden_Sword_Revision_3.png?version=7b04e50e0bd112e3ef14708193b411cb" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/5/50/Stone_Sword_Revision_2.png/120px-Stone_Sword_Revision_2.png?version=c244b45c4d0a8f849cc8eb69231912fd" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/6/67/Iron_Sword_Revision_2.png/120px-Iron_Sword_Revision_2.png?version=527eeb764dc46520dd7ac1e9908a8f12" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/7/70/Diamond_Sword_Revision_2.png/120px-Diamond_Sword_Revision_2.png?version=5f0e61488e208d1290153ffd38746b2e" alt="">
+
+                                </div>
+                                <div style="display: flex;">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/39/20190424114625%21Wooden_Axe_Revision_2.png/120px-Wooden_Axe_Revision_2.png?version=fd6aedff948e9218b7ab54c4512b2a04" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/9/9b/20190424093853%21Golden_Axe_Revision_2.png/120px-Golden_Axe_Revision_2.png?version=320dc26bcb19e229b156eb746ae1f3b0" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/3/38/20190424104209%21Stone_Axe_Revision_2.png/120px-Stone_Axe_Revision_2.png?version=d125062a6ca35b09ce41f8121a1834f5" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/f/f6/Iron_Axe_Revision_4.png/120px-Iron_Axe_Revision_4.png?version=65fa3a3684cfcfcc4d7b2aad58780114" alt="">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/archive/8/81/20190424091701%21Diamond_Axe_Revision_2.png/120px-Diamond_Axe_Revision_2.png?version=dc98241d0a3b0673a81cdc9eb1d03c7f" alt="">
+
+                                </div>
+                                <div style="display: flex;">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/1/17/Bow_Revision_1.png/120px-Bow_Revision_1.png?version=aaa5c1e220c50603b2b6c8a9010a8d6b" alt="">
+
+                                </div>
+                                <div style="display: flex;">
+                                    <img src="https://gamepedia.cursecdn.com/minecraft_zh_gamepedia/thumb/9/9a/Trident.png/120px-Trident.png?version=57c087a5dab2379bef5ac5866d0ade1f" alt="">
+                                </div>
+                                <script>
+                                    var weapon = document.getElementById("weapon");
+                                    var flag = 0;
+                                    console.log(weapon);
+                                    weapon.addEventListener("click", function() {
+                                        if (flag == 0) {
+                                            event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                            flag = 1;
+                                            return;
+                                        } else if (flag == 1) {
+                                            var str1 = "";
+                                            str1 = event.target.style.boxShadow;
+                                            console.log(str1);
+                                            if (str1 == "rgba(51, 51, 51, 0.5) 0px 3px 15px 3px") {
+                                                event.target.style.boxShadow = '';
+                                                flag = 0;
+                                                return;
+                                            }
+                                            //
+                                            else {
+                                                var child = weapon.children;
+                                                for (var i = 0; i < child.length; i++) {
+                                                    var child2 = child[i].children;
+                                                    for (var j = 0; j < child2.length; j++) {
+                                                        child2[j].style.boxShadow = '';
+                                                    }
+                                                }
+                                                event.target.style.boxShadow = "0 3px 15px 3px rgba(51, 51, 51, 0.5)";
+                                                flag = 1;
+                                                return;
+                                            }
+
+                                        }
+                                    })
+                                </script>
+                            </div>
 
                         </div>
 
@@ -304,8 +507,7 @@
             </a>
 
             <!-- Logout Modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
