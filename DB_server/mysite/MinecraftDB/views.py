@@ -112,13 +112,14 @@ def signup(request):
     return render(request, 'static/sign_up/signup.html')
 
 def reply_signup(request):
-    print(request.POST['SignName'])
+    print(request.POST)
     if request.POST['SignName']=="" or request.POST['SignAccount']=="" or request.POST['SignPassword']=="":
         return render(request, 'static/sign_up/signup.html',{"error_info":"請輸入正確 名稱 帳號 和密碼"})
     cursor = connection.cursor()
     cursor.execute("select Member_name from MinecraftDB_member where Account_number LIKE '" +
                            request.POST['SignAccount']+"'")
     ans = cursor.fetchone()
+    print("456")
     if ans is None:
         cursor.execute("INSERT INTO MinecraftDB_member (Member_name, Account_number,Password) values (%s, %s,%s)", 
         [request.POST['SignName'], request.POST['SignAccount'], request.POST['SignPassword']])
@@ -294,7 +295,6 @@ def building_materials(request):
         list_s = {'id': item[0], 'name': item[1], 'Texture': item[2],'Anti_Riot': item[3],'Rarity':item[4],'Max_Quanity':item[5]}
         List.append(list_s)
     return render(request, 'static/main_page/building_materials.html',{'Username': request.session['username'],'List':List})
-
 
 
 def ores(request):
